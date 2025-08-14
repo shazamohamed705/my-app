@@ -311,16 +311,7 @@ const TransportContract = () => {
   </tbody>
   </table>
 </div>
-            <div className="sign-area">
-              <div className="sign-box">
-                <div className="sign-line" />
-                <div>توقيع الطرف الأول</div>
-              </div>
-              <div className="sign-box">
-                <div className="sign-line" />
-                <div>توقيع الطرف الثاني</div>
-              </div>
-            </div>
+            
 
           </div>
         </div>
