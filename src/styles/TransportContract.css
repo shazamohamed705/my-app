@@ -1,0 +1,278 @@
+:root {
+  --th-color: #0e0f0f; /* لون نص th */
+  --accent: #c91414;
+  color: #000;
+}
+
+.contract-outer {
+  direction: rtl;
+  display: flex;
+  justify-content: center;
+  padding: 18px;
+  background: #e3d7d7;
+}
+
+.contract-inner {
+  max-width: 1000px;
+  width: 100%;
+  border: 4px solid #000;
+  padding: 8px;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+.contract-body {
+  border: 1px solid #000;
+  padding: 18px;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 2px solid #000;
+  padding-bottom: 10px;
+}
+
+.logo-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 180px;
+  justify-content: center;
+}
+
+
+.logo-text { font-size: 12px;
+   text-align: center;
+   
+   justify-content: center;
+   
+  }
+
+  .title-logo {
+  width: 80px;              /* صغّري/كبّري حسب رغبتك */
+  height: 64px;             /* لازم تكون مربعة عشان تطلع دايرة */
+  border-radius: 50%;       /* يخليها دائرة */
+  object-fit: cover;        /* يملأ الإطار بدون تمدّد غريب */
+  display: inline-block;    /* سلوك لطيف داخل النص */
+ 
+
+  background-color: transparent;
+}
+
+.center-title {
+  text-align: center;
+  flex: 1;
+}
+
+.main-title {
+  font-size: 26px;
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.sub-title {
+  font-size: 16px;
+  margin-top: 4px;
+}
+
+.company-info {
+  text-align: left;
+  width: 240px;
+  font-size: 13px;
+}
+
+.meta-row {
+  display: flex;
+  align-items: flex-start; 
+  gap: 20px; 
+  margin-top: 10px;
+}
+
+.meta-row p {
+  margin: 0;
+   font-weight: bold
+   ;
+   font-size: small;
+   padding: left 10px; 
+   margin-top: 0%;
+}
+
+.meta-row p:first-child {
+  white-space: nowrap; 
+  font-weight: bold;
+ margin-bottom: 4px;
+}
+/* جداول عامة */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 14px;
+  table-layout: fixed;
+}
+
+th, td {
+  border: 1px solid #000;
+  padding: 8px 6px;
+  font-size: 13px;
+  word-wrap: break-word;
+}
+
+th {
+  background: #f0f0f0;
+  color: var(--th-color);
+  font-weight: 700;
+  text-align: center;
+  font-size: 13px;
+}
+
+/* نص العنوان الجانبي */
+.side-title {
+  background-color: #f0f0f0;
+  color: var(--th-color);
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle; /* النص في منتصف العمود عموديًا */
+}
+
+.side-title {
+  background-color: #f0f0f0;
+  color: var(--th-color);
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle; /* النص في منتصف العمود عموديًا */
+}
+
+/* جعل جداول موديل السيارة + الطرف الثاني جنب بعض */
+.vehicle-party-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* ستايل أي جدول بنفس تقسيمة الطرف الثاني */
+.vehicle-layout-table {
+  border-collapse: collapse;
+  width: 100%;
+  direction: rtl;
+  table-layout: fixed; /* يثبت عرض الأعمدة */
+}
+
+.vehicle-layout-table th,
+.vehicle-layout-table td {
+  border: 1px solid #000;
+  padding: 6px;
+  font-size: 13px;
+  text-align: center;
+}
+
+.vehicle-layout-table th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+.info-table {
+  table-layout: fixed; /* يخلي الأعمدة ثابتة العرض */
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.info-table th,
+.info-table td {
+  border: 1px solid #000;
+  padding: 8px;
+  text-align: center;
+}
+/* ستايل أي جدول بنفس تقسيمة الطرف الثاني */
+.same-layout-table {
+  border-collapse: collapse;
+  width: 100%;
+  direction: rtl;
+  table-layout: fixed; /* يثبت عرض الأعمدة */
+}
+
+.same-layout-table th,
+.same-layout-table td {
+  border: 1px solid #000;
+  padding: 6px;
+  font-size: 13px;
+  text-align: center;
+}
+
+.same-layout-table th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+.blue-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  table-layout: fixed;
+}
+
+.blue-table th{
+    background-color:"#00a0e3";
+} 
+.blue-table td {
+  border: 1px solid #000;
+  padding: 6px;
+}
+
+.blue-table th {
+  color: #000;
+  font-weight: bold;
+}
+/* جدول الركاب */
+.passenger-table th, 
+.passenger-table td { 
+  text-align: center; 
+}
+
+.passenger-title { 
+  font-weight: 700; 
+  margin-top: 18px; 
+  text-align: center; 
+}
+
+/* نص الشروط */
+.conditions {
+  margin-top: 14px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* منطقة التوقيع */
+.sign-area {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 28px;
+}
+
+.sign-box {
+  width: 48%;
+  text-align: center;
+}
+
+.sign-line {
+  height: 1px;
+  border-top: 2px solid #000;
+  margin-bottom: 8px;
+}
+contract-outer {
+  page-break-after: always;
+}
+
+/* تحسين العرض على الشاشات الصغيرة */
+@media (max-width: 760px) {
+  .contract-inner { padding: 6px; }
+  .header { flex-direction: column; align-items: stretch; gap: 6px; }
+  .company-info, .logo-box { width: 100%; text-align: center; }
+  .sign-area { flex-direction: column; }
+  .sign-box { width: 100%; }
+  .vehicle-party-row { flex-direction: column; }
+  .vehicle-party-row .info-table { width: 100%; }
+}
