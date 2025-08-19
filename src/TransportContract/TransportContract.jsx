@@ -3,8 +3,8 @@ import { useParams } from "react-router-dom";
 import "../styles/TransportContract.css";
  import logo from "../assets/logo.png";
 const TransportContract = ({ defaultId }) => {
-  const { id, tripId } = useParams(); // ممكن ييجي من أي route
-  const finalId = id || tripId || defaultId; // ياخد أول قيمة متاحة
+  const { id, tripId } = useParams(); 
+  const finalId = id || tripId || defaultId; 
 
   const [trip, setTrip] = useState(null);
   const [vehicle, setVehicle] = useState(null);
