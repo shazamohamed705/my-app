@@ -73,6 +73,11 @@
   color: var(--accent);
   font-weight: bold;
 }
+.meta-row p {
+  white-space: normal; /* يسمح بالالتفاف الطبيعي */
+  word-wrap: break-word; /* يكسر الكلمات الطويلة بدل ما تخرج من الشاشة */
+  overflow-wrap: break-word; /* دعم أفضل لبعض المتصفحات */
+}
 
 .sub-title {
   font-size: 16px;

@@ -1,61 +1,36 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from "react"; 
 import { useParams } from "react-router-dom";
-import "../styles/TransportContract.css";
- import logo from "../assets/logo.png";
-const TransportContract = ({ defaultId }) => {
-  const { id, tripId } = useParams(); 
-  const finalId = id || tripId || defaultId; 
+ import "../styles/TransportContract.css"; import logo from "../assets/logo.png";
+ const TransportContract = () => {
+  const { id } = useParams(); // ناخد الـ id مباشرة من URL
 
   const [trip, setTrip] = useState(null);
   const [vehicle, setVehicle] = useState(null);
   const [driver, setDriver] = useState(null);
   const [passengers, setPassengers] = useState([]);
 
-  // استدعاء API بيانات الرحلة
   useEffect(() => {
-    if (!finalId) {
-      console.error("❌ مفيش أي ID متاح");
-      return;
-    }
+    if (!id) return;
 
-    console.log("📡 Fetching trip with ID:", finalId);
+    setTrip(null); // إعادة تعيين الحالة أثناء تحميل البيانات الجديدة
+    setVehicle(null);
+    setDriver(null);
+    setPassengers([]);
 
-    fetch(`https://my-bus.storage-te.com/api/trips/${finalId}/pdf`)
-      .then((res) => res.json())
-      .then((result) => {
-        console.log("✅ Trip API Result:", result);
-
+    fetch(`https://my-bus.storage-te.com/api/trips/${id}/pdf`)
+      .then(res => res.json())
+      .then(result => {
         if (result.success) {
           setTrip(result.data.trip);
           setVehicle(result.data.vehicle);
           setDriver(result.data.driver);
           setPassengers(result.data.trip.passengers);
-        } else {
-          console.error("❌ API Error:", result);
         }
       })
-      .catch((err) => console.error("❌ Fetch Error:", err));
-  }, [finalId]);
-
-  // تحميل الـ PDF
-  const downloadPDF = () => {
-    if (!finalId) return;
-
-    fetch(`https://my-bus.storage-te.com/api/trips/${finalId}/download-pdf`)
-      .then((res) => res.blob())
-      .then((blob) => {
-        const url = window.URL.createObjectURL(blob);
-        const a = document.createElement("a");
-        a.href = url;
-        a.download = `trip_${finalId}.pdf`;
-        a.click();
-        window.URL.revokeObjectURL(url);
-      })
-      .catch((err) => console.error("PDF Download Error:", err));
-  };
+      .catch(err => console.error(err));
+  }, [id]);
 
   if (!trip) return <p>⏳ جاري تحميل البيانات...</p>;
-
 
   return (
     <>

@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"; // <-- هنا الاستيراد
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import TransportContract from "./TransportContract/TransportContract";
 import "./App.css";
 
@@ -7,8 +7,8 @@ function App() {
     <BrowserRouter>
       <div className="app">
         <Routes>
-          {/* الصفحة الرئيسية تفتح رحلة 22 مباشرة */}
-          <Route path="/" element={<TransportContract defaultId="22" />} />
+          {/* إعادة توجيه الصفحة الرئيسية إلى الرحلة رقم 22 */}
+          <Route path="/" element={<Navigate to="/trips/22" replace />} />
 
           {/* باقي الرحلات باستخدام id */}
           <Route path="/trips/:id" element={<TransportContract />} />
@@ -18,4 +18,4 @@ function App() {
   );
 }
 
-export default App;
+export default App;
