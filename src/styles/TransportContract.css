@@ -73,13 +73,6 @@
   color: var(--accent);
   font-weight: bold;
 }
-.meta-row p {
-  white-space: normal;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  line-height: 1.5; /* مسافة أسطر أفضل للقراءة */
-  font-size: 14px;  /* حجم مناسب للموبايل */
-}
 
 
 .sub-title {
@@ -102,11 +95,10 @@
 
 .meta-row p {
   margin: 0;
-   font-weight: bold
-   ;
-   font-size: small;
-   padding: left 10px; 
-   margin-top: 0%;
+  font-weight: bold;
+  font-size: small;
+  padding-left: 10px;
+  margin-top: 0;
 }
 
 .meta-row p:first-child {
@@ -278,7 +270,7 @@ contract-outer {
 @media (max-width: 760px) {
   .contract-inner { padding: 6px; }
   .header { flex-direction: column; align-items: stretch; gap: 6px; }
-   .contract-inner p {
+  .meta-row p {
     font-size: 14px;
     line-height: 1.5;
     word-wrap: break-word;
