@@ -93,12 +93,17 @@
   margin-top: 10px;
 }
 
+/* تحسين نصوص meta-row لتكون بنفس شكل باقي نصوص العقد */
 .meta-row p {
-  margin: 0;
-  font-weight: bold;
-  font-size: small;
-  padding-left: 10px;
-  margin-top: 0;
+  font-family: "Arial", "Tahoma", sans-serif; 
+  font-weight: normal;                         
+  font-size: 13px;                             
+  line-height: 1.6;                           
+  word-wrap: break-word;                       
+  overflow-wrap: break-word;                   
+  white-space: normal;                         
+  margin: 0;                                   
+  padding: 0;                                  
 }
 
 .meta-row p:first-child {
@@ -303,14 +308,15 @@ contract-outer {
     gap: 8px;
   }
 
-  .meta-row p {
-    font-size: 13px;
-    line-height: 1.4;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    margin: 0;
+ .meta-row p {
+    font-size: 14px;          /* حجم مناسب للقراءة */
+    line-height: 1.5;         /* مسافة أسطر جيدة */
+    word-wrap: break-word;     /* يكسر الكلمات الطويلة */
+    overflow-wrap: break-word; /* دعم أفضل لبعض المتصفحات */
+    white-space: normal;       /* الالتفاف الطبيعي للنص */
+    margin: 0;                 /* إزالة المسافات الافتراضية */
+    padding: 0;                /* إزالة البادينج إذا موجود */
   }
-
   /* الجداول تتحول لعرض كامل */
   table, .vehicle-layout-table, .info-table, .same-layout-table, .blue-table, .passenger-table {
     width: 100%;
