@@ -267,18 +267,77 @@ contract-outer {
 }
 
 /* تحسين العرض على الشاشات الصغيرة */
+/* تحسين العرض على الشاشات الصغيرة */
 @media (max-width: 760px) {
-  .contract-inner { padding: 6px; }
-  .header { flex-direction: column; align-items: stretch; gap: 6px; }
-  .meta-row p {
+  .contract-inner {
+    padding: 8px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    text-align: center;
+  }
+
+  .logo-box, .company-info {
+    width: 100%;
+    text-align: center;
+  }
+
+  .center-title {
+    margin: 10px 0;
+  }
+
+  .main-title {
+    font-size: 20px;
+  }
+
+  .sub-title {
     font-size: 14px;
-    line-height: 1.5;
+  }
+
+  .meta-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .meta-row p {
+    font-size: 13px;
+    line-height: 1.4;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    margin: 0;
+  }
+
+  /* الجداول تتحول لعرض كامل */
+  table, .vehicle-layout-table, .info-table, .same-layout-table, .blue-table, .passenger-table {
+    width: 100%;
+    font-size: 12px;
+    table-layout: fixed;
+  }
+
+  th, td {
+    padding: 6px;
     word-wrap: break-word;
     overflow-wrap: break-word;
   }
-  .company-info, .logo-box { width: 100%; text-align: center; }
-  .sign-area { flex-direction: column; }
-  .sign-box { width: 100%; }
-  .vehicle-party-row { flex-direction: column; }
-  .vehicle-party-row .info-table { width: 100%; }
+
+  /* الجداول التي كانت جنب بعض تتحول عمودي */
+  .vehicle-party-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* منطقة التوقيع */
+  .sign-area {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .sign-box {
+    width: 100%;
+  }
 }
+
