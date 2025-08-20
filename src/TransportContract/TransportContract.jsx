@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
  import "../styles/TransportContract.css"; import logo from "../assets/logo.png";
  const TransportContract = () => {
-  const { id } = useParams(); // ناخد الـ id مباشرة من URL
+  const { id } = useParams(); 
 
   const [trip, setTrip] = useState(null);
   const [vehicle, setVehicle] = useState(null);
@@ -12,7 +12,7 @@ import { useParams } from "react-router-dom";
   useEffect(() => {
     if (!id) return;
 
-    setTrip(null); // إعادة تعيين الحالة أثناء تحميل البيانات الجديدة
+    setTrip(null); 
     setVehicle(null);
     setDriver(null);
     setPassengers([]);

@@ -74,10 +74,13 @@
   font-weight: bold;
 }
 .meta-row p {
-  white-space: normal; /* يسمح بالالتفاف الطبيعي */
-  word-wrap: break-word; /* يكسر الكلمات الطويلة بدل ما تخرج من الشاشة */
-  overflow-wrap: break-word; /* دعم أفضل لبعض المتصفحات */
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  line-height: 1.5; /* مسافة أسطر أفضل للقراءة */
+  font-size: 14px;  /* حجم مناسب للموبايل */
 }
+
 
 .sub-title {
   font-size: 16px;
@@ -275,6 +278,12 @@ contract-outer {
 @media (max-width: 760px) {
   .contract-inner { padding: 6px; }
   .header { flex-direction: column; align-items: stretch; gap: 6px; }
+   .contract-inner p {
+    font-size: 14px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
   .company-info, .logo-box { width: 100%; text-align: center; }
   .sign-area { flex-direction: column; }
   .sign-box { width: 100%; }
