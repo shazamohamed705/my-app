@@ -67,8 +67,16 @@ import { useParams } from "react-router-dom";
 
             <div className="meta-row">
            <div className="contract-row">
-  <p>التاريخ : <span className="red-text">24/5/2025</span></p>
-  <p>رقم الرحلة / <span className="red-text">9380001</span></p>
+ <p>
+  التاريخ /{" "}
+  <span className="red-text">
+    {trip?.departure_time
+      ? new Date(trip.departure_time).toLocaleDateString("ar-EG")
+      : "غير متوفر"}
+  </span>
+</p>
+
+  <p>رقم الرحلة / <span className="red-text">{trip.id}</span></p>
   <p>رقم العقد / <span className="red-text">8955601</span></p>
 </div>
 
@@ -157,7 +165,7 @@ import { useParams } from "react-router-dom";
       fontSize: "12px",
       padding: "2px 6px",
       borderRadius: "6px",
-      marginRight: "10px",   // زودنا المسافة من 5px لـ 10px
+      marginRight: "10px",   
       verticalAlign: "middle"
     }}
   >
@@ -294,8 +302,12 @@ cooperation.Ebdaat Al-Obour Transport <br />
     <table style={{ width: "100%", borderCollapse: "collapse" }}>
       <tbody>
         <tr>
-          <td style={{ borderRight: "1px solid #000", textAlign: "center" }}>{vehicle?.plate_number}</td>
-          <td style={{ textAlign: "center" }}>ا ص س</td>
+          {/* رقم اللوحة مقسم */}
+  {vehicle?.plate_number?.split("/").map((part, idx) => (
+    <td key={idx} style={{ textAlign: "center", borderRight: "1px solid #000" }}>
+      {part}
+    </td>
+  ))}
         </tr>
       </tbody>
     </table>
@@ -307,7 +319,7 @@ cooperation.Ebdaat Al-Obour Transport <br />
       <tbody>
         <tr>
           <td style={{ borderRight: "1px solid #000", textAlign: "center" }}>{vehicle?.vehicle_model}</td>
-          <td style={{ textAlign: "center" }}>هونداي ستاريا</td>
+          <td style={{ textAlign: "center" }}>{vehicle.manufacturing_year} </td>
         </tr>
       </tbody>
     </table>
@@ -333,9 +345,14 @@ cooperation.Ebdaat Al-Obour Transport <br />
   <td>
     <table style={{ width: "100%", borderCollapse: "collapse" }}>
       <tbody>
-        <tr>
-          <td style={{ borderRight: "1px solid #000", textAlign: "center" }}>{vehicle?.plate_number}</td>
-          <td style={{ textAlign: "center" }}>اص س</td>
+        
+          <tr>
+  
+  {vehicle?.plate_number?.split("/").map((part, idx) => (
+    <td key={idx} style={{ textAlign: "center", borderRight: "1px solid #000" }}>
+      {part}
+    </td>
+  ))}
         </tr>
       </tbody>
     </table>
@@ -347,7 +364,7 @@ cooperation.Ebdaat Al-Obour Transport <br />
       <tbody>
         <tr>
           <td style={{ borderRight: "1px solid #000", textAlign: "center" }}>{vehicle?.vehicle_model}</td>
-          <td style={{ textAlign: "center" }}>هونداي ستاريا</td>
+          <td style={{ textAlign: "center" }}>{vehicle.manufacturing_year}</td>
         </tr>
       </tbody>
     </table>

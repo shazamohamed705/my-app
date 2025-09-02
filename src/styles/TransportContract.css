@@ -1,5 +1,5 @@
 :root {
-  --th-color: #0e0f0f; /* لون نص th */
+  --th-color: #0e0f0f; 
   --accent: #c91414;
   color: #000;
 }
@@ -24,12 +24,12 @@
 
 .logo-box {
   display: flex;
-  justify-content: flex-end; /* تدفع المحتوى لأقصى اليمين */
+  justify-content: flex-end; 
 }
 
 .logo-text {
-  text-align: right; /* يجعل النصوص مصطفة على اليمين داخل div */
-  line-height: 1.5; /* مسافة بين السطور لتكون مرتبة */
+  text-align: right;
+  line-height: 1.5;
 }
 
 .main-title{
@@ -37,12 +37,12 @@
   font-weight: bold;
     text-align: center;
 position: relative;
-  top: -20px; /* يرفع العنصر 20px لفوق */
+  top: -20px; 
 
 }
 .sub-title{
   position: relative;
-  top: -20px; /* يرفع العنصر 20px لفوق */
+  top: -20px;
 }
 .center-title {
   width: 40%;
@@ -85,7 +85,7 @@ position: relative;
   border-collapse: collapse;
   margin-top: 20px;
   font-size: 13px;
-  table-layout: auto;        /* الأعمدة تاخد مساحة المحتوى */
+  table-layout: auto;        
 }
 
 .my-table.first-party th,
@@ -98,22 +98,22 @@ position: relative;
   white-space: nowrap;       
 }
 .car-trips {
-  width: 100%;                /* الجدول ياخد عرض الشاشة */
-  border-collapse: collapse;  /* يدمج حدود الأعمدة */
-  margin-top: 20px;           /* مسافة فوق الجدول */
+  width: 100%;              
+  border-collapse: collapse; 
+  margin-top: 20px;           
   font-size: 14px;
-  text-align: center;         /* النصوص تبقى في المنتصف */
+  text-align: center;         
 }
 
 .car-trips th,
 .car-trips {
-  border: 1px solid #000;     /* حدود واضحة */
-  padding: 10px 15px;         /* مسافة داخلية عشان الكلام مايبقاش لازق */
+  border: 1px solid #000;     
+  padding: 10px 15px;        
   color: #000;
 }
 
 .car-trips th {
-  background: #f2f2f2;        /* خلفية خفيفة للهيدر */
+  background: #f2f2f2;        
   font-weight: bold;
 }
 
@@ -122,19 +122,19 @@ position: relative;
 }
 .wrapper-box {
   display: flex;
-  justify-content: space-between; /* الجدول يمين + الصورة شمال */
-  align-items: flex-start; /* يبدأوا من فوق */
+  justify-content: space-between; 
+  align-items: flex-start; 
   margin: 15px;
 }
 
 .image-box {
-  flex-shrink: 0;   /* يمنع الصورة من التصغير */
+  flex-shrink: 0;   
 }
 
 .image-box img {
-  max-width: 400px;  /* كبرتيها شوية */
+  max-width: 400px; 
   height: auto;
-    margin-top: 20px;  /* ⬅️ نزول الصورة لتحت */
+    margin-top: 20px; 
 
   display: block;
 }
@@ -143,7 +143,7 @@ position: relative;
   border: 1px solid #004080;
   padding: 8px;
   font-size: 11px;
-  width: fit-content; /* عشان مايملاش الشاشة */
+  width: fit-content;
 }
 
 
@@ -152,8 +152,8 @@ position: relative;
   border: 1px solid #004080;
   font-family: "Arial", sans-serif;
   font-size: 11px;
-  width: 400px;            /* ⬅️ حجم ثابت مناسب */
-  margin: 15px 0 15px auto; /* ⬅️ يخليه يلزق في أقصى اليمين */
+  width: 400px;            
+  margin: 15px 0 15px auto; 
   box-shadow: 0 0 4px rgba(0,0,0,0.2);
 }
 
@@ -162,7 +162,7 @@ position: relative;
   color: #fff;
   padding: 6px;
   text-align: center;
-  width: 90px;   /* عرض صغير */
+  width: 90px;   
   font-size: 10px;
   display: flex;
   flex-direction: column;
@@ -319,20 +319,19 @@ hr {
   font-weight: bold;
   color: #333;
   background: #f1f1f1;
-  width: 60px; /* عرض عمود SR.NO */
+  width: 60px; 
 }
 .header-image img {
-  width: 100%;       /* بعرض الصفحة */
-  height: auto;      /* يحافظ على التناسب */
-  display: block;    /* يمنع الفراغات */
-  max-height: 250px; /* تقدري تتحكمي في أقصى ارتفاع */
-  object-fit: cover; /* يظبط الصورة ويمنع التشويه */
+  width: 100%;       
+  height: auto;      
+  display: block;    
+  max-height: 250px;
+  object-fit: cover; 
 }
 
-/* موبايل */
-/* =========================
-   قاعدة للجوال - Mobile
-========================= */
+
+  
+
 @media (max-width: 768px) {
   /* كل الجداول تأخذ عرض الشاشة بالكامل */
   .trip-table,
