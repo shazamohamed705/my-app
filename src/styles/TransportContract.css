@@ -333,18 +333,28 @@ hr {
   
 
 @media (max-width: 768px) {
-  /* كل الجداول تأخذ عرض الشاشة بالكامل */
-  .trip-table,
-  .passenger-table,
-  .car-trips,
-  .VEHICLE-table,
-  .my-table.first-party {
-    width: 100% !important;
-    font-size: 12px;
-    display: block;
-    overflow-x: auto; /* لو المحتوى واسع يظهر Scroll */
-    box-sizing: border-box;
-  }
+ /* جدول الرحلة الرئيسي */
+.trip-table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  table-layout: auto;
+  overflow-x: visible; /* يمنع ظهور scroll ومساحة فارغة */
+  box-sizing: border-box;
+}
+
+/* فقط الجداول الكبيرة الأخرى يسمح لها بالـ scroll */
+.passenger-table,
+.car-trips,
+.VEHICLE-table,
+.my-table.first-party {
+  width: 100%;
+  display: block;
+  overflow-x: auto;
+  box-sizing: border-box;
+}
+
 
   /* th و td */
   .trip-table th,
