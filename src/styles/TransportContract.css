@@ -14,63 +14,84 @@
 }
 
 /* الهيدر */
+/* خصيصًا للهيدر */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  text-align: center;
   margin-bottom: 15px;
+  gap: 20px; /* مسافة متوازنة */
 }
 
 .logo-box {
-  display: flex;
-  justify-content: flex-end; 
+  flex: 1;
+  text-align: right;
 }
 
 .logo-text {
-  text-align: right;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
-.main-title{
-  color: red;
-  font-weight: bold;
-    text-align: center;
-position: relative;
-  top: -20px; 
-
-}
-.sub-title{
-  position: relative;
-  top: -20px;
-}
 .center-title {
-  width: 40%;
+  flex: 1;
   text-align: center;
 }
 
 .center-title .title-logo {
-  width: 100px;
-  margin-bottom: 3px;
+  width: 120px;
+  margin-bottom: 5px;
 }
 
-.contract-row {
-  display: flex;
-  justify-content: space-between;
-  gap: 15px;
-  margin: 15px 0;
+.main-title {
+  color: red;
   font-weight: bold;
+  font-size: 20px;
+}
+
+.sub-title {
+  font-size: 14px;
+  margin-top: -5px;
+}
+
+.company-info {
+  flex: 1;
+  text-align: left;
+  line-height: 1.6;
+}
+
+
+/* صف التاريخ ورقم العقد */
+.meta-row {
+  display: flex;
+  justify-content: space-between; /* يمين - وسط - شمال */
+  align-items: center;
+  margin: 15px 0;
   font-size: 14px;
 }
 
-.contract-row p {
+.meta-item {
   margin: 0;
+  font-weight: bold;
+  flex: 1; /* كل عنصر ياخد مساحة متساوية */
+  text-align: center;
+}
+
+.meta-item.right {
+  text-align: right;
+}
+
+.meta-item.center {
+  text-align: center;
+}
+
+.meta-item.left {
+  text-align: left;
 }
 
 .red-text {
   color: red;
-  font-weight: bold;
 }
+
 
 
 .contract-intro {
@@ -85,17 +106,44 @@ position: relative;
   border-collapse: collapse;
   margin-top: 20px;
   font-size: 13px;
-  table-layout: auto;        
+  table-layout: auto; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* ظل للبروز */
+  border: 4px double #000;        
 }
 
 .my-table.first-party th,
 .my-table.first-party td {
-  border: 1px solid #000;
+  border: 4px double #000;
   padding: 10px 15px;
   text-align: center;
   vertical-align: middle;
   color: #000;
   white-space: nowrap;       
+
+}
+
+/* الصف الأول */
+.my-table.first-party tr:first-child th,
+.my-table.first-party tr:first-child td {
+  border-top: 4px double #000;
+}
+
+/* الصف الأخير */
+.my-table.first-party tr:last-child th,
+.my-table.first-party tr:last-child td {
+  border-bottom: 4px double #000;
+}
+
+/* العمود الأول */
+.my-table.first-party th:first-child,
+.my-table.first-party td:first-child {
+  border-left: 4px double #000;
+}
+
+/* العمود الأخير */
+.my-table.first-party th:last-child,
+.my-table.first-party td:last-child {
+  border-right: 4px double #000;
 }
 .car-trips {
   width: 100%;              
@@ -120,12 +168,7 @@ position: relative;
 .car-trips td {
   background: #fff;
 }
-.wrapper-box {
-  display: flex;
-  justify-content: space-between; 
-  align-items: flex-start; 
-  margin: 15px;
-}
+
 
 .image-box {
   flex-shrink: 0;   
@@ -138,77 +181,85 @@ position: relative;
 
   display: block;
 }
-
-.driver-notice-box {
-  border: 1px solid #004080;
-  padding: 8px;
-  font-size: 11px;
-  width: fit-content;
+/* الغلاف */
+.wrapper-box {
+  display: flex;
+  justify-content: space-between; /* يمين ويسار */
+  align-items: flex-start;
+  gap: 15px;
+  margin: 15px;
+  direction: rtl; /* علشان العربي يمين */
+  font-family: Arial, sans-serif;
+  font-size: 14px; /* خط صغير زي الصورة */
 }
 
-
+/* البوكس الأساسي */
 .driver-notice-box {
   display: flex;
-  border: 1px solid #004080;
-  font-family: "Arial", sans-serif;
-  font-size: 11px;
-  width: 400px;            
-  margin: 15px 0 15px auto; 
-  box-shadow: 0 0 4px rgba(0,0,0,0.2);
+  border: 4px double  #bbb;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  flex: 1;
+  max-width: 70%; /* ياخد عرض معقول */
 }
 
 .side-box {
-  background: linear-gradient(to bottom, #0059b3, #003366);
-  color: #fff;
-  padding: 6px;
+  border: 2px solid #a2bbe2;
+  background-color: #b3cce4;
+  padding: 15px 20px;
+  border-radius: 8px;
+  width: 50px;
   text-align: center;
-  width: 90px;   
-  font-size: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  align-self: stretch; 
 }
 
+
 .side-box h3 {
-  font-size: 11px;
-  margin: 0 0 4px 0;
-  color: #ffcccc;
+  margin: 0;
+  font-size: 18px;
+  color: #da3f3f;
+  font-weight: bold;
+    border-bottom: 2px solid red;
+    
 }
 
 .side-box p {
-  margin: 2px 0;
+  margin: 4px 0;
+  font-size: 14px;
+  color: #333;
+    border-bottom: 1px solid red;
 }
 
 .side-box .small {
-  font-size: 9px;
+  font-size: 12px;
+  color: #666;
+    border-bottom: 1px solid red;
 }
 
+/* النصوص */
 .content-box {
+  padding: 10px 15px;
   flex: 1;
-  padding: 6px 10px;
-  background: #fff;
-  color: #000;
-  line-height: 1.4;
+  line-height: 1.6;
 }
 
-.content-box p {
-  margin: 4px 0;
-}
-
-.content-box .bold {
-  font-weight: bold;
-}
-
-.content-box .company {
-  color: #004080;
-  font-weight: bold;
-}
-
-hr {
+.content-box hr {
+  margin: 10px 0;
   border: none;
-  border-top: 1px dashed #aaa;
-  margin: 5px 0;
+  border-top: 1px solid #ccc;
 }
+
+.content-box .english {
+  font-style: italic;
+  font-size: 12px;
+}
+.content-box .urdu {
+  font-family: 'Noto Nastaliq Urdu', serif;
+  font-size: 12px;
+}
+
+
+
 .VEHICLE-table {
   width: 100%;
   border-collapse: collapse;

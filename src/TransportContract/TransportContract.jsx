@@ -66,7 +66,7 @@ import { useParams } from "react-router-dom";
             </div>
 
             <div className="meta-row">
-           <div className="contract-row">
+
  <p>
   التاريخ /{" "}
   <span className="red-text">
@@ -79,7 +79,7 @@ import { useParams } from "react-router-dom";
   <p>رقم الرحلة / <span className="red-text">{trip.id}</span></p>
   <p>رقم العقد / <span className="red-text">8955601</span></p>
 </div>
-
+<div className="contract-row">
                 <p>
                 تم إبرام هذا العقد بين المتعاقدين بناء على المادة (٣٩) التاسعة والثلاثون من الأنظمة المنظمة لنشاط النقل المتخصص وتأجير و توجيه الحافلات وبناء على الفقرة (١) من المادة (٢٩) والتي تنص على ان يجب على الناقل إبرام عقد نقل مع الاطراف المحددين في المادة (٤٠) قبل تنفيذ عمليات النقل على الطرق البرية و بما ال يخالف أحكام هذه اللائحة و وفقا الآلية التي تحددها هيئة النقل و بناء على ما سبق تم إبرام عقد النقل بين الأطراف الآتية
               </p>
@@ -201,14 +201,14 @@ import { useParams } from "react-router-dom";
         
           </div>
           <div className="wrapper-box">
-            
-           <div className="driver-notice-box">
-      {/* العمود الأزرق */}
-      <div className="side-box">
+            <div className="side-box">
         <h3>تنبيه للسائق</h3>
         <p>Driver Notice</p>
         <p className="small">للتوزيع لدى السائقين</p>
       </div>
+
+           <div className="driver-notice-box">
+   
 
       {/* النصوص */}
       <div className="content-box">
@@ -263,7 +263,12 @@ cooperation.Ebdaat Al-Obour Transport <br />
               </div>
               <div className="center-title">
                 <img src={logo} alt="Logo" className="title-logo" />
-                <div className="main-title">كشف الرحاب </div>
+<div
+  className="main1-title"
+  style={{ fontSize: "32px", fontWeight: "bold", color: "red" }}
+>
+  كشف الرحاب
+</div>
              
               </div>
               <div className="company-info">
