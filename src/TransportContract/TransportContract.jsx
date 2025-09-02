@@ -45,9 +45,10 @@ import { useParams } from "react-router-dom";
               <div className="logo-box">
                 <div className="logo-text">
                 <div>مؤسسة إبداعات العبور للنقليات</div>
-                <div>ج/ 0555989407</div>
+                <div>جوال / ٠٥٥٥٩٨٩٤٠٦</div>
                 <div>المدينة المنورة</div>
-                <div>ت.س / 4650252501</div>
+                <div> الرقم الموحد / ٧٠٣٢٢٥٣٤٦</div>
+                <div>الرقم الضريبي ( ٣١١٤٩٦٩١٥٦٠٠٠٠) </div>
                 </div>
               </div>
               <div className="center-title">
@@ -56,162 +57,184 @@ import { useParams } from "react-router-dom";
                 <div className="sub-title">عقد نقل على الطرق البرية</div>
               </div>
               <div className="company-info">
-                <div>Obour Creations Transport EST  </div>
-                <div>M/ 0555989407</div>
+                <div>Obour Creations Transport Est </div>
+                <div>MOBILE/ 0555989406</div>
                 <div>AL Madinah AL Munawwara </div>
-                <div>C.R / 4650252501</div>
+                <div>M.ON / 7032253465</div>
+                <div>VAT NO: (311496915600003)</div>
               </div>
             </div>
 
             <div className="meta-row">
-            <p>  امر التشغيل :24/5/2025</p>
+           <div className="contract-row">
+  <p>التاريخ : <span className="red-text">24/5/2025</span></p>
+  <p>رقم الرحلة / <span className="red-text">9380001</span></p>
+  <p>رقم العقد / <span className="red-text">8955601</span></p>
+</div>
 
                 <p>
                 تم إبرام هذا العقد بين المتعاقدين بناء على المادة (٣٩) التاسعة والثلاثون من الأنظمة المنظمة لنشاط النقل المتخصص وتأجير و توجيه الحافلات وبناء على الفقرة (١) من المادة (٢٩) والتي تنص على ان يجب على الناقل إبرام عقد نقل مع الاطراف المحددين في المادة (٤٠) قبل تنفيذ عمليات النقل على الطرق البرية و بما ال يخالف أحكام هذه اللائحة و وفقا الآلية التي تحددها هيئة النقل و بناء على ما سبق تم إبرام عقد النقل بين الأطراف الآتية
               </p>
             </div>
-
-          {/* جدول الطرف الأول */}
-          <table className="info-table first-party">
-           {/* جدول الطرف الأول */}
-
+{/* جدول الطرف الأول */}
+<table className="my-table first-party">
   <colgroup>
-    <col style={{ width: "20%" }} /> {/* الطرف الأول */}
-    <col style={{ width: "50%" }} /> {/* عمود صفين */}
-    <col style={{ width: "30%" }} /> {/* العمود الطويل */}
-  </colgroup>
-  <tbody>
-    <tr>
-      {/* عمود عنوان جانبي طويل */}
-      <th rowSpan="2" className="side-title">الطرف الأول</th>
-
-      {/* الصف الأول من العمود العريض */}
-      <td>مؤسسةابدعات العبور للنقليات </td>
-
-      {/* العمود الطولي */}
-      <td rowSpan="2">
-  
-        جوال /0555989406
-      </td>
-    </tr>
-    <tr>
-      {/* الصف الثاني من العمود العريض */}
-      <td>7032253456 /4560252501/ س.ت</td>
-    </tr>
-  </tbody>
-</table>
-          <div className="vehicle-party-row">
-<table className="same-layout-table">
-  <colgroup>
-    <col style={{ width: "20%" }} /> {/* العمود الجانبي */}
+    <col style={{ width: "25%" }} />
+    <col style={{ width: "35%" }} />
     <col style={{ width: "20%" }} />
     <col style={{ width: "20%" }} />
-    <col style={{ width: "25%" }} />
-    <col style={{ width: "25%" }} />
   </colgroup>
-
-  <thead>
-    <tr>
-      <th></th>
-      <th colSpan="4" style={{ textAlign: "center" }}>السائق الأساسي</th>
-    </tr>
-  </thead>
-
   <tbody>
     <tr>
-      <th rowSpan="3" className="side-title">الطرف الثاني</th>
-      <td>الاسم</td>
-      <td colSpan="3">{driver?.name}</td>
+      <th rowSpan="3" style={{ color: "#3399ff" }}>الطرف الأول</th>
+      <td>مؤسسة إبداعات العبور للنقليات.</td>
+      <th rowSpan="3" style={{ color: "#3399ff" }}>أرقام التواصل</th>
+      <td>0555989406</td>
     </tr>
     <tr>
-      <td>رقم الجوال </td>
-      <td>{driver?.phone}</td>
-      <td>الرقم القومي </td>
-      <td>{driver?.driver_profile?.national_id}</td>
+      <td>س.ت/ ٧٠٣٢٢٥٣٤٦٥/٤٦٥٠٢٥٢٥٠١</td>
+      <td>---</td>
     </tr>
     <tr>
-      <td>الجنسيه</td>
-      <td>{driver?.driver_profile?.nationality}</td>
-      <td>رقم الرخصه</td>
-      <td>{driver?.driver_profile?.driving_license_number}</td>
+      <td>العنوان / السعودية - المدينة المنورة</td>
+      <td>---</td>
     </tr>
   </tbody>
 </table>
 
-           <table className="info-table ">
+
+{/* جدول الطرف الثاني */}
+<table className="my-table first-party">
   <colgroup>
-    <col style={{ width: "25%" }} /> {/* العمود الأول */}
-    <col style={{ width: "25%" }} /> {/* العمود الثاني */}
-    <col style={{ width: "25%" }} /> {/* العمود الثالث */}
-    <col style={{ width: "25%" }} /> {/* العمود الرابع */}
+    <col style={{ width: "25%" }} />
+    <col style={{ width: "35%" }} />
+    <col style={{ width: "20%" }} />
+    <col style={{ width: "20%" }} />
   </colgroup>
-
-  <thead>
-    <tr>
-      <th>موديل السيارة</th>
-      <th>رقم اللوحة</th>
-      <th>نوع السيارة</th>
-      <th>مالك السياره </th>
-    </tr>
-  </thead>
-
   <tbody>
     <tr>
-      <td>{vehicle?.vehicle_model}</td>
-      <td>{vehicle?.plate_number}</td>
-      <td>{vehicle?.vehicle_type}</td>
-      <td>{vehicle?.owner_name}</td>
+      <th rowSpan="3" style={{ color: "#3399ff" }}>الطرف الثاني</th>
+      <td>فندق امجاد الهدا</td>
+      <th rowSpan="3" style={{ color: "#3399ff" }}>أرقام التواصل</th>
+      <td>0556742234</td>
     </tr>
-   
+    <tr>
+      <td>س.ت/ ٧٠٣٢٢٥٣٤٦٥/٤٦٥٠٢٥٢٩٠٦</td>
+      <td>0558993875</td>
+    </tr>
+    <tr>
+      <td>المدينة المنورة المركزية</td>
+      <td>---</td>
+    </tr>
   </tbody>
-  
 </table>
 
- </div>
+          
           {/* الشروط */}
           <div className="conditions">
             <p>
-              اتفق الطرفان على أن ينفذ الطرف الأول عملية النقل للطرف الثاني مع مرافقيه وذويه
-              من الموقع المحدد مسبقًا وتوصيلهم إلى الجهة المحددة بالعقد ...
+            اتفق الطرفان على أن ينفذ الطرف الأول عملية النقل للطرف الثاني مع مرافقيه و ذويهم من الموقع المحدد مسبقا من الطرف الثاني و
+توصيلهم إلى الجهة المحددة بالعقد .
             </p>
-            <p>
-              في حالة إلغاء التعاقد لأي سبب شخصي أو أسباب أخرى تتعلق بالحجوزات أو الأنظمة
-              تكون سياسة الإلغاء والاستبدال ...
-            </p>
+          
           </div>
   {/* بيانات السيارة */}
-          <table className=".same-layout-table">
-            <colgroup>
-              <col style={{ width: "25%" }} />
-              <col style={{ width: "25%" }} />
-              <col style={{ width: "25%" }} />
-              <col style={{ width: "25%" }} />
-            </colgroup>
-            <thead>
-              <tr>
-                <th>النقل من </th>
-                <th>   {trip.departure_location  }  </th>
-                <th>وصولا الي</th>
-                <th>   {trip.destination_location}  </th>
-              </tr>
-            </thead>
-          </table>
+        <table className="car-trips" style={{ borderCollapse: "collapse", width: "100%" }}>
+  <colgroup>
+    <col style={{ width: "25%" }} />
+    <col style={{ width: "25%" }} />
+    <col style={{ width: "25%" }} />
+    <col style={{ width: "25%" }} />
+  </colgroup>
+  <thead>
+    <tr>
+      <th>النقل من</th>
+     <th style={{ position: "relative" }}>
+  <span
+    style={{
+      background: "green",
+      color: "white",
+      fontSize: "12px",
+      padding: "2px 6px",
+      borderRadius: "6px",
+      marginRight: "10px",   // زودنا المسافة من 5px لـ 10px
+      verticalAlign: "middle"
+    }}
+  >
+    Start
+  </span>
+        {trip.departure_location}
+      </th>
+      <th>وصولا الي</th>
+      <th style={{ position: "relative" }}>
+  <span
+    style={{background: "red",color: "white", fontSize: "12px",padding: "2px 6px",borderRadius: "6px",marginRight: "10px",  verticalAlign: "middle"  }}
+    
+  >
+    Finish
+  </span>
+        {trip.destination_location}
+      </th>
+    </tr>
+  </thead>
+</table>
+
           {/* الشروط */}
           <div className="conditions">
             <p>
-              اتفق الطرفان على أن ينفذ الطرف الأول عملية النقل للطرف الثاني مع مرافقيه وذويه
-              من الموقع المحدد مسبقًا وتوصيلهم إلى الجهة المحددة بالعقد ...
+              في حالة الغاء التعاقد لأي سبب شخصي أو أسباب أخرى تتعلق في الحجوزات او الأنظمة تكون سياسة الإلغاء و الاستبدال
             </p>
             <p>
-              في حالة إلغاء التعاقد لأي سبب شخصي أو أسباب أخرى تتعلق بالحجوزات أو الأنظمة
-              تكون سياسة الإلغاء والاستبدال ...
+            و في حالة طلب الطرف الثاني الحجز من خلال الموقع الإلكتروني للمؤسسة يعتبر هذا الحجز و موافقه على الشروط و الأحكام بالموقع
+الإلكتروني هو موافقة على هذا العقد لتنفيذ عملية النقل المتفق عليها مع الطرف الأول بواسطة حافلات المؤسسة المرخصة و
+المتوافقة مع الاشتراطات المقدرة من هيئة النقل .
             </p>
           </div>
-          <div className="conditions">
-              <p>اتفق الطرفان على أن ينفذ الطرف الأول عملية النقل للطرف الثاني ...</p>
-            </div>
+        
           </div>
+          <div className="wrapper-box">
+            
+           <div className="driver-notice-box">
+      {/* العمود الأزرق */}
+      <div className="side-box">
+        <h3>تنبيه للسائق</h3>
+        <p>Driver Notice</p>
+        <p className="small">للتوزيع لدى السائقين</p>
+      </div>
+
+      {/* النصوص */}
+      <div className="content-box">
+      
+  <span style={{ color: "red", fontWeight: "bold" }}>تنبيه للسائق:</span>
+  <span className="arabic" style={{ color: "red", fontWeight: "bold" ,marginRight: "5px" }}>
+    برجاء الإلتزام بتعليمات الهيئة العامة للنقل و تعليمات المؤسسة، أي مخالفة تعرض
+    السائق للمساءلة.
+  </span>
+  ,
+        <hr />
+        
+        <p className="english bold">
+          Please comply with the regulations of the Public Transport Authority and the company’s guidelines. Any violation
+will lead to accountability.
+Our goal: Respectfully serving passengers and reflecting a positive image of the Kingdom.Thank you for your
+cooperation.Ebdaat Al-Obour Transport <br />
+          <span className="company">Edbatat Al-Obour Transport</span>
+        </p>
+        <hr />
+        <p className="urdu">
+         براه کرم پبلک ٹرانسپورٹ اتهارٹی کے قوانين اور ادارے کی ہدايات پر عمل کريں۔ کسی بهی خلاف ورزی کی صورت
+ميں آپ کو جوابده ٹهہرايا جائے گا۔
+ہمارا مقصد: مسافروں کی عزت کے ساته خدمت اور مملکت کی اچهی شبيہ پيش کرنا ہے۔
+تعاون کا شکريہ۔ ابداعات العبور ٹرانسپورٹ.
+        </p>
+      </div>
+    </div>
+    <div className="image-box">
+    <img src="/img5.png" alt="صورة" />
+  </div>
+</div>
         </div>
+        
       </div>
 
       {/* الصفحة الثانية */}
@@ -224,99 +247,253 @@ import { useParams } from "react-router-dom";
               <div className="logo-box">
                 <div className="logo-text">
                 <div>مؤسسة إبداعات العبور للنقليات</div>
-                <div>ج/ 0555989407</div>
+                <div>جوال / ٠٥٥٥٩٨٩٤٠٦</div>
                 <div>المدينة المنورة</div>
-                <div>ت.س / 4650252501</div>
+                <div> الرقم الموحد / ٧٠٣٢٢٥٣٤٦</div>
+                <div>الرقم الضريبي ( ٣١١٤٩٦٩١٥٦٠٠٠٠) </div>
                 </div>
               </div>
               <div className="center-title">
                 <img src={logo} alt="Logo" className="title-logo" />
-                <div className="main-title">أمر تشغيل</div>
-                <div className="sub-title">عقد نقل على الطرق البرية</div>
+                <div className="main-title">كشف الرحاب </div>
+             
               </div>
               <div className="company-info">
-                <div> Obour Creatinons Transport Est </div>
-                <div>M/0555989409</div>
-                <div> AL Madinah AL Munawwara</div>
-                <div>C.R /4650252501 </div>
+                 <div>Obour Creations Transport Est </div>
+                <div>MOBILE/ 0555989406</div>
+                <div>AL Madinah AL Munawwara </div>
+                <div>M.ON / 7032253465</div>
+                <div>VAT NO: (311496915600003)</div>
               </div>
             </div>
-            <table className="same-layout-table">
-               <thead>
+<table className="VEHICLE-table">
+  <thead>
     <tr>
-      <th style={{ backgroundColor: "#00a0e3" }}>VEHICLE#</th>
-      <th style={{ backgroundColor: "#00a0e3" }} >VEHICLE#</th>
-     <th style={{ backgroundColor: "#00a0e3" }} >IQAMA#</th>
-     <th style={{ backgroundColor: "#00a0e3" }}>MOBILE#</th>
-      <th style={{ backgroundColor: "#00a0e3" }}>DRIVER NAME</th>
-
+      <th style={{ backgroundColor: "#fafa04", color: "#040404ff" }}>VEHICLE PLATE#</th>
+      <th style={{ backgroundColor: "#fafa04", color: "#141313ff" }}>VEHICLE MODEL#</th>
+      <th style={{ backgroundColor: "#fafa04", color: "#040404ff" }}>IQAMA#</th>
+      <th style={{ backgroundColor: "#fafa04", color: "#0b0b0bff" }}>MOBILE#</th>
+      <th style={{ backgroundColor: "#fafa04", color: "#060606ff" }}>DRIVER NAME</th>
     </tr>
-     </thead>
-    <tbody>
-      <tr>
-        <td>{vehicle?.plate_number}</td>
-        <td> {vehicle?.vehicle_model}</td>
-        <td> {driver?.driver_profile?.national_id}</td>
-        <td> {driver?.phone}</td>
-        <td> {driver?.name}</td>
+  </thead>
 
-      </tr>
-    </tbody>
-             </table>
-               <table className="blue-table">
-            <thead>
-                <tr>
-                <th style={{ backgroundColor: "#00a0e3" }}>DATE</th>
-                <th style={{ backgroundColor: "#00a0e3" }} colSpan="3">DESTINATION</th>
-      
-                 </tr>
-              </thead>
-             <tbody>
-              {/* صف TO */}
-            <tr>
-        <td rowSpan="2" style={{ fontWeight: "bold", fontSize: "18px", textAlign: "center" }}>
-          {trip?.departure_time && new Date(trip.departure_time).toLocaleDateString("ar-EG")}
-          </td>
-       <td rowSpan="2" style={{ fontWeight: "bold", textAlign: "center" }}>
-           {trip.departure_location  }
+  <tbody>
+    {/* الصف العربي قبل البيانات */}
+    <tr>
+      <th style={{ backgroundColor: "#c1d8e5",color: "#060606ff" }}>لوحة المركبة</th>
 
-     
-        </td>
-       <td style={{  fontWeight: "bold", textAlign: "center"}}>TO</td>
-       <td rowSpan="2"  style={{ fontWeight:"bold",textAlign: "center"}}> 
-          {trip.destination_location}  
+      <th style={{ backgroundColor: "#c1d8e5", color: "#060606ff" }}>موديل المركبة</th>
+      <th style={{ backgroundColor: "#c1d8e5", color: "#060606ff" }}>رقم الاقامة</th>
+      <th style={{ backgroundColor: "#c1d8e5", color: "#060606ff" }}>رقم التواصل</th>
+      <th style={{ backgroundColor: "#c1d8e5", color: "#060606ff" }}>اسم سائق الرحلة</th>
+    </tr>
+
+    <tr>
+  {/* أول خانة مقسمة داخل td */}
+  <td>
+    <table style={{ width: "100%", borderCollapse: "collapse" }}>
+      <tbody>
+        <tr>
+          <td style={{ borderRight: "1px solid #000", textAlign: "center" }}>{vehicle?.plate_number}</td>
+          <td style={{ textAlign: "center" }}>ا ص س</td>
+        </tr>
+      </tbody>
+    </table>
+  </td>
+
+  {/* ثاني خانة مقسمة داخل td */}
+  <td>
+    <table style={{ width: "100%", borderCollapse: "collapse" }}>
+      <tbody>
+        <tr>
+          <td style={{ borderRight: "1px solid #000", textAlign: "center" }}>{vehicle?.vehicle_model}</td>
+          <td style={{ textAlign: "center" }}>هونداي ستاريا</td>
+        </tr>
+      </tbody>
+    </table>
+  </td>
+
+  {/* باقي الأعمدة بدون تقسيم */}
+  <td>{driver?.driver_profile?.national_id}</td>
+  <td>{driver?.phone}</td>
+  <td>{driver?.name}</td>
+</tr>
+
+
+    {/* الصف العربي يتكرر بعد البيانات */}
+    <tr>
+      <th style={{ backgroundColor: "#c1d8e5", color: "#000" }}>لوحة المركبة</th>
+      <th style={{ backgroundColor: "#c1d8e5", color: "#000" }}>موديل المركبة</th>
+      <th style={{ backgroundColor: "#c1d8e5", color: "#000" }}>رقم الاقامة</th>
+      <th style={{ backgroundColor: "#c1d8e5", color: "#000" }}>رقم التواصل</th>
+      <th style={{ backgroundColor: "#c1d8e5", color: "#000" }}>اسم سائق الرحلة</th>
+    </tr>
+ <tr>
+  {/* أول خانة مقسمة داخل td */}
+  <td>
+    <table style={{ width: "100%", borderCollapse: "collapse" }}>
+      <tbody>
+        <tr>
+          <td style={{ borderRight: "1px solid #000", textAlign: "center" }}>{vehicle?.plate_number}</td>
+          <td style={{ textAlign: "center" }}>اص س</td>
+        </tr>
+      </tbody>
+    </table>
+  </td>
+
+  {/* ثاني خانة مقسمة داخل td */}
+  <td>
+    <table style={{ width: "100%", borderCollapse: "collapse" }}>
+      <tbody>
+        <tr>
+          <td style={{ borderRight: "1px solid #000", textAlign: "center" }}>{vehicle?.vehicle_model}</td>
+          <td style={{ textAlign: "center" }}>هونداي ستاريا</td>
+        </tr>
+      </tbody>
+    </table>
+  </td>
+
+  {/* باقي الأعمدة بدون تقسيم */}
+  <td>{driver?.driver_profile?.national_id}</td>
+  <td>{driver?.phone}</td>
+  <td>{driver?.name}</td>
+</tr>
+
+
+  </tbody>
+</table>
+
+             
+  <table
+  className="trip-table"
+  style={{ borderCollapse: "collapse", width: "100%", border: "2px solid #000" }}
+>
+  <thead>
+    {/* الهيدر الأساسي بالإنجليزي */}
+    <tr>
+      <th
+        style={{
+          backgroundColor: "#fafa04",color: "#000",padding: "8px",border: "1px solid #000", }}colSpan="3"  
+      >
+        FLIGHT PATH#
+      </th>
+      <th
+        style={{backgroundColor: "#fafa04",color: "#000",padding: "8px",border: "1px solid #000",}}    
+      >
+        Date
+      </th>
+    </tr>
+
+    {/* الهيدر بالعربي */}
+    <tr>
+      <th
+        style={{ backgroundColor: "#e4f6f8",color: "black",padding: "8px", border: "1px solid #000", }} colSpan="3"
+       
+      >
+        مسار الرحلة
+      </th>
+      <th
+        style={{ backgroundColor: "#e4f6f8", color: "black",  padding: "8px",border: "1px solid #000", }}
+      >
+        التاريخ
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      {/* Start City */}
+      <td
+        style={{textAlign: "center", fontWeight: "bold",color: "green", padding: "10px", border: "1px solid #000",}}  
+        
+      >
+        <span>{trip.departure_location}</span>{" "}
+        <span
+          style={{ backgroundColor: "#e4f6f8", color: "#155724",fontSize: "11px",  fontWeight: "bold",padding: "3px 10px", borderRadius: "999px", marginLeft: "6px", border: "1px solid #155724",     }} 
+           
+        >
+          Start
+        </span>
       </td>
-    </tr>
-    <tr>
-      <td style={{ textAlign: "center", fontWeight: "bold" }}>
-        {trip.distance_km ? ` ${trip.distance_km}KM `: "غير متوفر "}
+
+      {/* TO */}
+      <td
+        style={{ textAlign: "center",fontWeight: "bold",background: "black", color: "white", padding: "10px", border: "1px solid #000",width: "80px", }}
+       
+      >
+        TO
+      </td>
+
+      {/* Finish City */}
+      <td
+        style={{ textAlign: "center", fontWeight: "bold", color: "red",  padding: "10px",border: "1px solid #000",  }}
+    
+      >
+        <span>{trip.destination_location}</span>{" "}
+        <span
+          style={{ backgroundColor: "#f8d7da",color: "#721c24",fontSize: "11px",fontWeight: "bold", padding: "3px 10px", borderRadius: "999px", marginLeft: "6px",  border: "1px solid #721c24",}}
+
+        >
+          Finish
+        </span>
+      </td>
+
+      {/* Date */}
+      <td
+        style={{textAlign: "center",fontWeight: "bold",color: "red",fontSize: "16px",border: "1px solid #000",  padding: "10px", }}
+       
+      >
+        {trip?.departure_time &&
+          new Date(trip.departure_time).toLocaleDateString("ar-EG")}
       </td>
     </tr>
   </tbody>
 </table>
 
- <table className="passenger-table" style={{ borderCollapse: "collapse" }}>
+<table
+  className="passenger-table"
+  style={{ borderCollapse: "collapse", direction: "ltr" }}
+>
   <thead>
+   
     <tr>
-      <th style={{ backgroundColor: "#00a0e3", color: "#fff" }}>NO.</th>
-      <th style={{ backgroundColor: "#00a0e3", color: "#fff" }}>PASSENGER NAME #</th>
-      <th style={{ backgroundColor: "#00a0e3", color: "#fff" }}>IDENTY #</th>
-      <th style={{ backgroundColor: "#00a0e3", color: "#fff" }}>NATIONALITY#S</th>
+      <th>SR.NO</th>
+      <th>PASSENGER NAME #</th>
+      <th>PASSENGR IDENTY #</th>
+      <th>NATIONALITY</th>
+    </tr>
+
+   
+    <tr>
+      <th>الرقم</th>
+      <th>اسم الراكب</th>
+      <th>رقم الهوية</th>
+      <th>الجنسية</th>
     </tr>
   </thead>
   <tbody>
-    {passengers.map(( p, i) => (
+    {passengers.map((p, i) => (
       <tr key={p.id}>
         <td>{i + 1}</td>
         <td>{p.name}</td>
         <td>{p.national_id}</td>
         <td>{p.nationality}</td>
-     
       </tr>
     ))}
   </tbody>
-  </table>
+</table>
+
 </div>
+<div className="header-image">
+  <img src="/img8.png" alt="Header" />
+</div>
+<div
+  style={{ backgroundColor: "#ffeb3b", color: "red" , fontWeight: "bold",  fontSize: "16px",   textAlign: "center",  padding: "10px", borderBottom: "3px solid red"  }}
+
+>
+  علي جميع السائقين الالتزام بتعليمات و توجيهات هيئة النقل و تعليمات مؤسسة ابداعات العبور للنقل
+</div>
+
             
 
           </div>
@@ -327,10 +504,3 @@ import { useParams } from "react-router-dom";
 };
 
 export default TransportContract;
-
-          
-
-
-          
-
-         
