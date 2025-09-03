@@ -367,391 +367,56 @@
   object-fit: cover; 
 }
 
-/* ===== التصميم المتجاوب - يحافظ على الطول والعرض ===== */
+/* ===== Media Queries ===== */
 
-/* جميع أحجام الشاشات - يحافظ على النسب الأصلية */
-@media (max-width: 1200px) {
-  .contract-outer {
-    max-width: 95%;
-    margin: 15px auto;
-  }
-}
-
+/* شاشة ≤ 900px */
 @media (max-width: 900px) {
-  .contract-outer {
-    max-width: 98%;
-    margin: 10px auto;
-    padding: 15px;
-  }
-  
-  .wrapper-box {
-    gap: 12px;
-    margin: 12px;
-  }
-  
-  .side-box {
-    padding: 12px 15px;
-  }
-  
-  .content-box {
-    padding: 8px 12px;
+  .contract-outer { padding: 15px; margin: 10px auto; max-width: 95%; }
+  .wrapper-box { gap: 12px; margin: 12px; }
+  .side-box { padding: 12px 15px; }
+  .content-box { padding: 8px 12px; }
+  .image-box img { max-width: 350px; }
+  .my-table.first-party, .car-trips, .VEHICLE-table, .trip-table, .passenger-table {
+    font-size: 12px;
   }
 }
 
+/* شاشة ≤ 768px */
 @media (max-width: 768px) {
-  .contract-outer {
-    padding: 12px;
-    margin: 8px auto;
+ .wrapper-box { gap: 6px; margin: 6px; }
+  .side-box, .driver-notice-box, .image-box { width: 100%; min-height: auto; }
+  .image-box img { max-width: 90%; margin-top: 15px; }
+  .trip-table, .passenger-table, .VEHICLE-table {
+    display: block; 
+    overflow-x: auto; 
+    white-space: nowrap;
   }
-  
-  .wrapper-box {
-    gap: 10px;
-    margin: 10px;
-  }
-  
-  /* الحفاظ على الطول الأصلي للسايد بوكس */
-  .side-box {
-    padding: 15px 20px; /* نفس الطول الأصلي */
-    width: 50px; /* نفس العرض الأصلي */
-    min-height: 200px; /* ضبط الطول الأدنى */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  
-  .side-box h3 {
-    font-size: 18px; /* نفس الحجم الأصلي */
-    margin-bottom: 15px; /* نفس المسافة */
-  }
-  
-  .side-box p {
-    font-size: 14px; /* نفس الحجم الأصلي */
-    margin: 8px 0; /* نفس المسافة */
-  }
-  
-  .side-box .small {
-    font-size: 12px; /* نفس الحجم الأصلي */
-    margin: 6px 0; /* نفس المسافة */
-  }
-  
-  /* الحفاظ على الطول الأصلي لصندوق التنبيه */
-  .driver-notice-box {
-    min-height: 200px; /* ضبط الطول الأدنى */
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .content-box {
-    padding: 10px 15px; /* نفس الطول الأصلي */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-  
-  .content-box span,
-  .content-box p {
-    font-size: 14px; /* نفس الحجم الأصلي */
-    margin-bottom: 10px; /* نفس المسافة */
-    line-height: 1.6; /* نفس الطول الأصلي */
-  }
-  
-  .content-box .english,
-  .content-box .urdu {
-    font-size: 12px; /* نفس الحجم الأصلي */
-    margin-bottom: 8px; /* نفس المسافة */
-  }
-  
-  /* الحفاظ على الطول الأصلي للصورة */
-  .image-box {
-    min-height: 200px; /* ضبط الطول الأدنى */
-    display: flex;
-    align-items: flex-start;
-  }
-  
-  .image-box img {
-    max-width: 400px; /* نفس الحجم الأصلي */
-    height: auto;
-    margin-top: 20px; /* نفس المسافة */
-  }
-  
-  .main-title {
-    font-size: 20px; /* نفس الحجم الأصلي */
-  }
-  
-  .sub-title {
-    font-size: 14px; /* نفس الحجم الأصلي */
-  }
-  
-  .header {
-    gap: 20px; /* نفس المسافة الأصلية */
-    margin-bottom: 15px; /* نفس المسافة */
-  }
-  
-  .meta-row {
-    font-size: 14px; /* نفس الحجم الأصلي */
-    margin: 15px 0; /* نفس المسافة */
-  }
-  
-  .contract-intro {
-    font-size: 14px; /* نفس الحجم الأصلي */
-    line-height: 1.8; /* نفس الطول الأصلي */
-    margin: 15px 0; /* نفس المسافة */
-  }
-  
-  }
+  .trip-table th, .trip-table td,
+  .passenger-table th, .passenger-table td,
+  .VEHICLE-table th, .VEHICLE-table td { min-width: 60px; padding: 6px; font-size: 12px; }
+}
 
-
+/* شاشة ≤ 600px */
 @media (max-width: 600px) {
-  .contract-outer {
-    padding: 10px;
-    margin: 5px auto;
-  }
-  .main-title { font-size: 16px; }
+  .main-title { font-size: 18px; }
   .sub-title { font-size: 13px; }
-
-  
-  .wrapper-box {
-    gap: 8px;
-    margin: 8px;
-  }
-  
-  /* الحفاظ على الطول الأصلي */
-  .side-box {
-    padding: 15px 20px; /* نفس الطول الأصلي */
-    width: 50px; /* نفس العرض الأصلي */
-    min-height: 200px; /* ضبط الطول الأدنى */
-  }
-  
-  .side-box h3 {
-    font-size: 18px; /* نفس الحجم الأصلي */
-    margin-bottom: 15px; /* نفس المسافة */
-  }
-  
-  .side-box p {
-    font-size: 14px; /* نفس الحجم الأصلي */
-    margin: 8px 0; /* نفس المسافة */
-  }
-  
-  .side-box .small {
-    font-size: 12px; /* نفس الحجم الأصلي */
-    margin: 6px 0; /* نفس المسافة */
-  }
-  
-  .driver-notice-box {
-    min-height: 200px; /* ضبط الطول الأدنى */
-  }
-  
-  .content-box {
-    padding: 10px 15px; /* نفس الطول الأصلي */
-  }
-  
-  .content-box span,
-  .content-box p {
-    font-size: 14px; /* نفس الحجم الأصلي */
-    margin-bottom: 10px; /* نفس المسافة */
-    line-height: 1.6; /* نفس الطول الأصلي */
-  }
-  
-  .content-box .english,
-  .content-box .urdu {
-    font-size: 12px; /* نفس الحجم الأصلي */
-    margin-bottom: 8px; /* نفس المسافة */
-  }
-  
-  .image-box {
-    min-height: 200px; /* ضبط الطول الأدنى */
-  }
-  
-  .image-box img {
-    max-width: 400px; /* نفس الحجم الأصلي */
-    margin-top: 20px; /* نفس المسافة */
-  }
-  
-  .main-title {
-    font-size: 20px; /* نفس الحجم الأصلي */
-  }
-  
-  .sub-title {
-    font-size: 14px; /* نفس الحجم الأصلي */
-  }
-  
-  .header {
-    gap: 20px; /* نفس المسافة الأصلية */
-    margin-bottom: 15px; /* نفس المسافة */
-  }
-  
-  .meta-row {
-    font-size: 14px; /* نفس الحجم الأصلي */
-    margin: 15px 0; /* نفس المسافة */
-  }
-  
-  .contract-intro {
-    font-size: 14px; /* نفس الحجم الأصلي */
-    line-height: 1.8; /* نفس الطول الأصلي */
-    margin: 15px 0; /* نفس المسافة */
-  }
-  
-  .my-table.first-party,
-  .car-trips,
-  .VEHICLE-table,
-  .trip-table,
-  .passenger-table {
-    font-size: 13px; /* نفس الحجم الأصلي */
-    margin-top: 20px; /* نفس المسافة */
-  }
-  
-  .my-table.first-party th,
-  .my-table.first-party td,
-  .car-trips th,
-  .car-trips td,
-  .VEHICLE-table th,
-  .VEHICLE-table td,
-  .trip-table th,
-  .trip-table td,
-  .passenger-table th,
-  .passenger-table td {
-    padding: 10px 15px; /* نفس الطول الأصلي */
-  }
+  .contract-intro { font-size: 13px; line-height: 1.5; }
+  .side-box h3 { font-size: 16px; }
+  .side-box p, .side-box .small { font-size: 12px; }
+  .content-box span, .content-box p { font-size: 13px; }
+  .image-box img { max-width: 100%; height: auto; margin-top: 10px; }
+  .wrapper-box { gap: 10px; margin: 10px; flex-direction: column; align-items: center; }
 }
 
+/* شاشة ≤ 480px */
 @media (max-width: 480px) {
-  .contract-outer {
-    padding: 8px;
-    margin: 3px auto;
-  }
-  
-  .wrapper-box {
-    gap: 6px;
-    margin: 6px;
-  }
-  
-  /* الحفاظ على الطول الأصلي */
-  .side-box {
-    padding: 10px 10px; /* نفس الطول الأصلي */
-    width: 50px; /* نفس العرض الأصلي */
-    min-height: 200px; /* ضبط الطول الأدنى */
-  }
-  
-  .side-box h3 {
-    font-size: 18px; /* نفس الحجم الأصلي */
-    margin-bottom: 15px; /* نفس المسافة */
-  }
-  
-  .side-box p {
-    font-size: 14px; /* نفس الحجم الأصلي */
-    margin: 8px 0; /* نفس المسافة */
-  }
-  
-  .side-box .small {
-    font-size: 12px; /* نفس الحجم الأصلي */
-    margin: 6px 0; /* نفس المسافة */
-  }
-  
-  .driver-notice-box {
-    min-height: 200px;
-    flex: 0 0 auto;         
-  min-height: 150px;     
-  max-height: 200px;      
-  overflow: auto;         
-} /* ضبط الطول الأدنى */
-  
-  
-  .content-box {
-    padding: 8px 10px; /* نفس الطول الأصلي */
-  }
-  
-  .content-box span,
-  .content-box p {
-    font-size: 14px; /* نفس الحجم الأصلي */
-    margin-bottom: 10px; /* نفس المسافة */
-    line-height: 1.6; /* نفس الطول الأصلي */
-  }
-  
-  .content-box .english,
-  .content-box .urdu {
-    font-size: 12px; /* نفس الحجم الأصلي */
-    margin-bottom: 5px; /* نفس المسافة */
-  }
-  
-  .image-box {
-    min-height: 200px; /* ضبط الطول الأدنى */
-  }
-  
-  .image-box img {
-    max-width: 400px; /* نفس الحجم الأصلي */
-    margin-top: 20px; /* نفس المسافة */
-  }
-  
-  .main-title {
-    font-size: 20px; /* نفس الحجم الأصلي */
-  }
-  
-  .sub-title {
-    font-size: 14px; /* نفس الحجم الأصلي */
-  }
-  
-  .header {
-    gap: 20px; /* نفس المسافة الأصلية */
-    margin-bottom: 15px; /* نفس المسافة */
-  }
-  
-  .meta-row {
-    font-size: 14px; /* نفس الحجم الأصلي */
-    margin: 15px 0; /* نفس المسافة */
-  }
-  
-  .contract-intro {
-    font-size: 14px; /* نفس الحجم الأصلي */
-    line-height: 1.8; /* نفس الطول الأصلي */
-    margin: 15px 0; /* نفس المسافة */
-  }
-  
-  .my-table.first-party,
-  .car-trips,
-  .VEHICLE-table,
-  .trip-table,
-  .passenger-table {
-    font-size: 13px; /* نفس الحجم الأصلي */
-    margin-top: 20px; /* نفس المسافة */
-  }
-  
-  .my-table.first-party th,
-  .my-table.first-party td,
-  .car-trips th,
-  .car-trips td,
-  .VEHICLE-table th,
-  .VEHICLE-table td,
-  .trip-table th,
-  .trip-table td,
-  .passenger-table th,
-  .passenger-table td {
-    padding: 10px 15px; /* نفس الطول الأصلي */
-  }
+  .main-title { font-size: 16px; }
+  .sub-title { font-size: 12px; }
+  .contract-intro { font-size: 12px; line-height: 1.4; }
+  .side-box h3 { font-size: 14px; }
+  .side-box p, .side-box .small { font-size: 11px; }
+  .content-box span, .content-box p { font-size: 12px; }
+  .wrapper-box { gap: 8px; margin: 8px; }
+  .image-box img { max-width: 100%; height: auto; margin-top: 10px; }
+  table, th, td { font-size: 11px; padding: 5px; }
 }
-
-/* منع التمرير الأفقي للجداول على الشاشات الصغيرة */
-@media (max-width: 600px) {
-  .my-table.first-party,
-  .car-trips,
-  .VEHICLE-table,
-  .trip-table,
-  .passenger-table {
-    overflow-x: auto;
-    display: block;
-  }
-  
-  .my-table.first-party th,
-  .my-table.first-party td,
-  .car-trips th,
-  .car-trips td,
-  .VEHICLE-table th,
-  .VEHICLE-table td,
-  .trip-table th,
-  .trip-table td,
-  .passenger-table th,
-  .passenger-table td {
-    min-width: 60px;
-  }
-}
-
