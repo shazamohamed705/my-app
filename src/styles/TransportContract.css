@@ -386,7 +386,7 @@
   .sub-title { font-size: 12px; }
   .wrapper-box{align-items:center ;flex-direction: column;}
   .driver-notice-box { width :100%;align-items: center;flex-direction: column; font-size: 9px; padding: 5px; }
-  .side-box { width: 100%; margin-bottom: 10px; font-size: 12px;align-self: center; }
+  .side-box { width: auto; margin: 0 auto; font-size: 12px; }
   .content-box { text-align: center; font-size: 11px; line-height: 1.4; }
   .image-box img { max-width: 100%;justify-content: center; }
   table, th, td { font-size: 11px; padding: 5px; }
@@ -398,8 +398,9 @@
   .main-title { font-size: 16px; }
   .sub-title { font-size: 13px; }
   .driver-notice-box { flex-direction: column; font-size: 10px; }
-  .side-box { width: 100%; margin-bottom: 10px; }
+  .side-box { width: auto;max-width: 200px; margin-bottom: 10px; }
   .content-box { font-size: 12px; text-align: center; }
+  .image-box{text-align: center;}
   .image-box img { max-width: 95%; margin: 0 auto; }
   table, th, td { font-size: 12px; padding: 6px; }
 }
