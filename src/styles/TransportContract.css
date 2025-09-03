@@ -392,17 +392,26 @@
     justify-content: center;
   }
 
-  .side-box, .driver-notice-box, .image-box {
+  .side-box, .image-box {
     flex: 1 1 100px;      
     min-width: 80px;      
     max-width: 120px;     
     font-size: 11px;
     text-align: center;
-    overflow-wrap: break-word;   /* يكسر الكلمات الطويلة */
+    overflow-wrap: break-word;   
     word-wrap: break-word;       /* لدعم المتصفحات القديمة */
     hyphens: auto;               /* لعمل تقسيم الكلمات تلقائي */
     max-height: 200px;           /* تحديد أقصى ارتفاع */
     overflow: auto;              /* إضافة scroll لو النص طويل جدًا */
+  }
+  .driver-notice-box {
+    width: 100%;             /* كامل العرض */
+    font-size: 12px;         /* حجم فونت مناسب */
+    text-align: center;      /* للعرض على الموبايل */
+  }
+
+  .driver-notice-box .content-box {
+    line-height: 1.4;        /* ارتفاع سطر مناسب للقراءة */
   }
 
   .image-box img {
