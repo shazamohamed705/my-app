@@ -384,31 +384,38 @@
   .contract-outer { padding: 10px; margin: 10px; font-size: 12px; }
   .main-title { font-size: 14px; }
   .sub-title { font-size: 12px; }
-  .wrapper-box {
+    .wrapper-box {
     display: flex;
-    flex-direction: row;  /* جنب بعض */
-    flex-wrap: wrap;      /* يسمح بالكسر لو المساحة صغيرة */
-    align-items: flex-start;
-    justify-content: center;
+    flex-direction: row;  
+    flex-wrap: wrap;      
     gap: 5px;
+    justify-content: center;
   }
 
   .side-box, .driver-notice-box, .image-box {
-    flex: 1 1 100px;      /* flex-grow:1, flex-shrink:1, قاعدة عرض 100px */
-    min-width: 80px;      /* أقل عرض ممكن */
-    max-width: 150px;     /* أقصى عرض */
+    flex: 1 1 100px;      
+    min-width: 80px;      
+    max-width: 120px;     
     font-size: 11px;
     text-align: center;
+    overflow-wrap: break-word;   /* يكسر الكلمات الطويلة */
+    word-wrap: break-word;       /* لدعم المتصفحات القديمة */
+    hyphens: auto;               /* لعمل تقسيم الكلمات تلقائي */
+    max-height: 200px;           /* تحديد أقصى ارتفاع */
+    overflow: auto;              /* إضافة scroll لو النص طويل جدًا */
   }
 
   .image-box img {
     max-width: 100%;
     height: auto;
+    display: block;
+    margin: 0 auto;
   }
  table, th, td { 
   font-size: 11px; 
   padding: 5px; 
 }
+
 
 }
 
