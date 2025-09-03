@@ -432,146 +432,146 @@
 
 }
 
-/* موبايل متوسط */
+/* هواتف صغيرة */
 @media (min-width: 401px) and (max-width: 600px) {
   .contract-outer { padding: 15px; }
   .main-title { font-size: 16px; }
   .sub-title { font-size: 13px; }
-.wrapper-box {
-    gap: 10px;
-    padding: 10px;
+
+  .wrapper-box {
+    display: flex;
+    flex-direction: row;  
+    gap: 8px;
+    justify-content: flex-start;
+    align-items: flex-start; /* لضبط ارتفاع العناصر */
   }
 
   .side-box {
-    min-width: 140px;
-    max-width: 160px;
-    padding: 10px;
-  }
-
-  .side-box h3 {
-    font-size: 14px;
-    margin-bottom: 6px;
-  }
-
-  .side-box p {
+    flex: 0 0 100px;       /* عرض ثابت */
     font-size: 11px;
-    margin-bottom: 4px;
-  }
-
-  .side-box .small {
-    font-size: 9px;
+    text-align: center;
+    overflow-wrap: break-word;   
+    word-wrap: break-word;      
+    hyphens: auto;               
   }
 
   .driver-notice-box {
-    gap: 10px;
+    flex: 1 1 auto;         /* ياخد المساحة المتبقية */
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+    box-sizing: border-box;
+    margin: 0;
   }
 
-  .notice-title {
-     font-size: 12px;
-    margin-bottom: 6px;
-  }
-
-  .arabic-notice {
-    font-size: 10px;
-    line-height: 1.3;
-  }
-
-  .english.bold {
-    font-size: 10px;
-    line-height: 1.3;
-    margin-bottom: 8px;
-  }
-
-  .company {
-    font-size: 11px;
-    margin-top: 6px;
-  }
-
-  .urdu {
-    font-size: 9px;
-    line-height: 1.3;
-    margin-top: 10px;
-  }
-
-  hr {
-    margin: 10px 0;
+  .driver-notice-box .content-box span,
+  .driver-notice-box .content-box p {
+    display: block;
+    margin-bottom: 5px;
   }
 
   .image-box {
-    min-width: 80px;
-    max-width: 100px;
+    width: 100%;            /* تظهر تحت driver-notice-box */
+    text-align: center;
+    margin-top: 10px;
   }
-  .content-box { font-size: 12px; text-align: center; }
-  .image-box{text-align: center;}
-  .image-box img { max-width: 95%; margin: 0 auto; }
-  table, th, td { font-size: 12px; padding: 6px; }
+
+  .image-box img {
+    max-width: 85%;         /* تكبر بالنسبة للعرض */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .content-box {
+    flex: 1 1 auto;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  table, th, td { 
+    font-size: 12px; 
+    padding: 6px; 
+  }
 }
 
 /* تابلت صغير */
 @media (min-width: 601px) and (max-width: 768px) {
   .main-title { font-size: 18px; }
   .sub-title { font-size: 14px; }
+
   .wrapper-box {
-  display: flex;
-  flex-direction: row;  
-  gap: 5px;
-  justify-content: center;
-  align-items: flex-start; /* لضبط ارتفاع العناصر */
-}
+    display: flex;
+    flex-direction: row;  
+    gap: 10px;
+    justify-content: center;
+    align-items: flex-start; /* لضبط ارتفاع العناصر */
+  }
 
-.side-box {
-  flex: 0 0 100px;       /* ثابت العرض تمامًا */
-  font-size: 11px;
-  text-align: center;
-  overflow-wrap: break-word;   
-  word-wrap: break-word;      
-  hyphens: auto;               
-            
-}
-
-.driver-notice-box {
-  flex: 1 1 auto;           /* يسمح لها بالتمدد حسب المساحة المتاحة */
-  font-size: 12px;
-  line-height: 1.5;
-  text-align: center;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  hyphens: auto;
-  max-height: none;
-  box-sizing: border-box;
-  margin: 0;                /* بدل 5px لتجنب زيادة المساحة */
-}
-
-.driver-notice-box .content-box span,
-.driver-notice-box .content-box p {
-  display: block;
-  margin-bottom: 5px;
-}
-
- .image-box {
-    width: 100%;              /* ياخد كامل العرض */
+  .side-box {
+    flex: 0 0 100px;       /* عرض ثابت */
+    font-size: 11px;
     text-align: center;
-    margin-top: 5px;          /* مسافة بسيطة فوق */
+    overflow-wrap: break-word;   
+    word-wrap: break-word;      
+    hyphens: auto;               
+  }
+
+  .driver-notice-box {
+    flex: 1 1 auto;         /* ياخد المساحة المتبقية */
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  .driver-notice-box .content-box span,
+  .driver-notice-box .content-box p {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .image-box {
+    width: 100%;           /* تظهر تحت driver-notice-box */
+    text-align: center;
+    margin-top: 10px;
   }
 
   .image-box img {
-    max-width: 80%;           /* تكبر بالنسبة للعرض */
+    max-width: 80%;        /* تكبر بالنسبة للعرض */
     height: auto;
     display: block;
     margin: 0 auto;
   }
 
-  .content-box {flex: 1 1 auto;           /* يسمح لها بالتمدد حسب المساحة المتاحة */
-  font-size: 12px;
-  line-height: 1.5;
-  text-align: center;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  hyphens: auto;
-  max-height: none;
-  box-sizing: border-box;
-  margin: 0; }
-  .image-box img { max-width: 80%; margin: 10px auto; }
-  table, th, td { font-size: 13px; padding: 8px; }
+  .content-box {
+    flex: 1 1 auto;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  table, th, td { 
+    font-size: 13px; 
+    padding: 8px; 
+  }
 }
 
