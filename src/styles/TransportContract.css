@@ -645,7 +645,7 @@
   
   /* الحفاظ على الطول الأصلي */
   .side-box {
-    padding: 15px 20px; /* نفس الطول الأصلي */
+    padding: 10px 10px; /* نفس الطول الأصلي */
     width: 50px; /* نفس العرض الأصلي */
     min-height: 200px; /* ضبط الطول الأدنى */
   }
@@ -670,7 +670,7 @@
   }
   
   .content-box {
-    padding: 10px 15px; /* نفس الطول الأصلي */
+    padding: 8px 10px; /* نفس الطول الأصلي */
   }
   
   .content-box span,
