@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
  import "../styles/TransportContract.css"; import logo from "../assets/logo.png";
  const TransportContract = () => {
   const { id } = useParams(); 
-
   const [trip, setTrip] = useState(null);
   const [vehicle, setVehicle] = useState(null);
   const [driver, setDriver] = useState(null);
@@ -267,7 +266,7 @@ cooperation.Ebdaat Al-Obour Transport <br />
   className="main1-title"
   style={{ fontSize: "32px", fontWeight: "bold", color: "red" }}
 >
-  كشف الركاب
+  كشف الركاب 
 </div>
              
               </div>
