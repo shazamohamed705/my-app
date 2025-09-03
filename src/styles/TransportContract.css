@@ -527,6 +527,9 @@
     padding: 10px;
     margin: 5px auto;
   }
+  .main-title { font-size: 16px; }
+  .sub-title { font-size: 13px; }
+
   
   .wrapper-box {
     gap: 8px;
@@ -666,8 +669,13 @@
   }
   
   .driver-notice-box {
-    min-height: 200px; /* ضبط الطول الأدنى */
-  }
+    min-height: 200px;
+    flex: 0 0 auto;         
+  min-height: 150px;     
+  max-height: 200px;      
+  overflow: auto;         
+} /* ضبط الطول الأدنى */
+  
   
   .content-box {
     padding: 8px 10px; /* نفس الطول الأصلي */
