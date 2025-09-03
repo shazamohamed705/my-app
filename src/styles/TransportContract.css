@@ -384,11 +384,10 @@
   .contract-outer { padding: 10px; margin: 10px; font-size: 12px; }
   .main-title { font-size: 14px; }
   .sub-title { font-size: 12px; }
-  .wrapper-box{flex-direction: column;align-items: center;}
-  .driver-notice-box { align-items: center;flex-direction: column; font-size: 9px; padding: 5px; }
-  .side-box { width: 100%; margin-bottom: 10px;align-self: auto;}
+  .driver-notice-box { width :100%;align-items: center;flex-direction: column; font-size: 9px; padding: 5px; }
+  .side-box { width: 100%; margin-bottom: 10px; font-size: 12px;align-self: center; }
   .content-box { text-align: center; font-size: 11px; line-height: 1.4; }
-  .image-box img { max-width: 100%;text-align: 0 auto; }
+  .image-box img { max-width: 100%; }
   table, th, td { font-size: 11px; padding: 5px; }
 }
 
