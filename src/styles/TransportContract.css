@@ -454,11 +454,57 @@
   .main-title { font-size: 16px; }
   .sub-title { font-size: 13px; }
 
-  .wrapper-box { flex-direction: row; gap: 8px; justify-content: flex-start; align-items: flex-start; }
-  .side-box { flex: 0 0 100px; font-size: 11px; }
-  .driver-notice-box { flex: 1 1 auto; font-size: 12px; line-height: 1.5; text-align: center; }
+  .wrapper-box {
+    display: flex;
+    flex-direction: row;   /* افقي */
+    flex-wrap: wrap;       /* يسمح بالانكسار عند ضيق الشاشة */
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 10px;
+  }
+
+  /* السليد */
+  .side-box {
+    flex: 0 0 30%;         /* تقريبًا ثلث العرض */
+    min-width: 100px;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  /* صندوق التنبيه */
+  .driver-notice-box {
+    flex: 1 1 65%;         /* ياخد الباقي */
+    min-width: 150px;
+    box-sizing: border-box;
+    font-size: 12px;
+    line-height: 1.4;
+    text-align: center;
+  }
+
   .driver-notice-box .content-box span,
-  .driver-notice-box .content-box p { margin-bottom: 5px; display: block; }
+  .driver-notice-box .content-box p {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 12px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  /* الصورة */
+  .image-box {
+    width: 100%;           /* تظهر تحتهم إذا ضاق المكان */
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .image-box img {
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
   .image-box { width: 100%; margin-top: 10px; }
   .image-box img { max-width: 85%; height: auto; }
   table, th, td { font-size: 12px; padding: 6px; }
@@ -469,12 +515,56 @@
   .main-title { font-size: 18px; }
   .sub-title { font-size: 14px; }
 
-  .wrapper-box { flex-direction: row; gap: 10px; justify-content: center; align-items: flex-start; }
-  .side-box { flex: 0 0 100px; font-size: 11px; }
-  .driver-notice-box { flex: 1 1 auto; font-size: 12px; line-height: 1.5; text-align: center; }
+  .wrapper-box {
+    display: flex;
+    flex-direction: row;   /* افقي */
+    flex-wrap: wrap;       /* يسمح بالانكسار عند ضيق الشاشة */
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 10px;
+  }
+
+  /* السليد */
+  .side-box {
+    flex: 0 0 30%;         /* تقريبًا ثلث العرض */
+    min-width: 100px;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  /* صندوق التنبيه */
+  .driver-notice-box {
+    flex: 1 1 65%;         /* ياخد الباقي */
+    min-width: 150px;
+    box-sizing: border-box;
+    font-size: 12px;
+    line-height: 1.4;
+    text-align: center;
+  }
+
   .driver-notice-box .content-box span,
-  .driver-notice-box .content-box p { display: block; margin-bottom: 5px; }
-  .image-box { width: 100%; margin-top: 10px; }
-  .image-box img { max-width: 80%; height: auto; }
+  .driver-notice-box .content-box p {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 12px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  /* الصورة */
+  .image-box {
+    width: 100%;           /* تظهر تحتهم إذا ضاق المكان */
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .image-box img {
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
   table, th, td { font-size: 13px; padding: 8px; }
 }
