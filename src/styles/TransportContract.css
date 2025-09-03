@@ -387,7 +387,7 @@
     .wrapper-box {
     display: flex;
     flex-direction: row;  
-    flex-wrap: wrap;      
+     
     gap: 5px;
     justify-content: center;
   }
@@ -399,21 +399,24 @@
     font-size: 11px;
     text-align: center;
     overflow-wrap: break-word;   
-    word-wrap: break-word;       /* لدعم المتصفحات القديمة */
-    hyphens: auto;               /* لعمل تقسيم الكلمات تلقائي */
-    max-height: 200px;           /* تحديد أقصى ارتفاع */
-    overflow: auto;              /* إضافة scroll لو النص طويل جدًا */
+    word-wrap: break-word;      
+    hyphens: auto;               
+    max-height: 200px;           
+    overflow: auto;             
   }
-.driver-notice-box {
-    width: 100%;               /* ياخد كامل العرض */
-    font-size: 12px;           /* حجم فونت مناسب */
-    line-height: 1.5;          /* ارتفاع سطر مناسب للقراءة */
-    text-align: center;         /* للنصوص على الموبايل */
-    overflow-wrap: break-word;  /* كسر الكلمات الطويلة */
+
+    .driver-notice-box {
+    width: 100%;               /* ياخد العرض الكامل المتاح */
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+    overflow-wrap: break-word;
     word-wrap: break-word;
     hyphens: auto;
-    max-height: none;           /* مش هنقيد الطول */
+    max-height: none;
     box-sizing: border-box;
+    margin: 5px 0;
+     align-items: stretch;
   }
 
   .driver-notice-box .content-box span,
