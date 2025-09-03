@@ -384,55 +384,49 @@
   .contract-outer { padding: 10px; margin: 10px; font-size: 12px; }
   .main-title { font-size: 14px; }
   .sub-title { font-size: 12px; }
-    .wrapper-box {
-    display: flex;
-    flex-direction: row;  
-     
-    gap: 5px;
-    justify-content: center;
-  }
+   .wrapper-box {
+  display: flex;
+  flex-direction: row;  
+  gap: 5px;
+  justify-content: center;
+  align-items: flex-start; /* لضبط ارتفاع العناصر */
+}
 
-  .side-box, .image-box {
-    flex: 1 1 100px;      
-    min-width: 80px;      
-    max-width: 120px;     
-    font-size: 11px;
-    text-align: center;
-    overflow-wrap: break-word;   
-    word-wrap: break-word;      
-    hyphens: auto;               
-    max-height: 200px;           
-    overflow: auto;             
-  }
+.side-box, .image-box {
+  flex: 0 0 100px;       /* ثابت العرض تمامًا */
+  font-size: 11px;
+  text-align: center;
+  overflow-wrap: break-word;   
+  word-wrap: break-word;      
+  hyphens: auto;               
+  max-height: 200px;           
+  overflow: auto;             
+}
 
-    .driver-notice-box {
-    width: 100%;               /* ياخد العرض الكامل المتاح */
-    font-size: 12px;
-    line-height: 1.5;
-    text-align: center;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    hyphens: auto;
-    max-height: none;
-    box-sizing: border-box;
-    margin: 5px 0;
-     align-items: stretch;
-  }
+.driver-notice-box {
+  flex: 1 1 auto;           /* يسمح لها بالتمدد حسب المساحة المتاحة */
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+  max-height: none;
+  box-sizing: border-box;
+  margin: 0;                /* بدل 5px لتجنب زيادة المساحة */
+}
 
-  .driver-notice-box .content-box span,
-  .driver-notice-box .content-box p {
-    display: block;            /* كل فقرة أو span في سطر مستقل */
-    margin-bottom: 5px;
-  }
-  .image-box img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-  }
- table, th, td { 
-  font-size: 11px; 
-  padding: 5px; 
+.driver-notice-box .content-box span,
+.driver-notice-box .content-box p {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.image-box img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 
@@ -443,8 +437,51 @@
   .contract-outer { padding: 15px; }
   .main-title { font-size: 16px; }
   .sub-title { font-size: 13px; }
-  .driver-notice-box { flex-direction: column; font-size: 10px; }
-  .side-box { width: auto;max-width: 200px; margin-bottom: 10px; }
+ .wrapper-box {
+  display: flex;
+  flex-direction: row;  
+  gap: 5px;
+  justify-content: center;
+  align-items: flex-start; /* لضبط ارتفاع العناصر */
+}
+
+.side-box, .image-box {
+  flex: 0 0 100px;       /* ثابت العرض تمامًا */
+  font-size: 11px;
+  text-align: center;
+  overflow-wrap: break-word;   
+  word-wrap: break-word;      
+  hyphens: auto;               
+  max-height: 200px;           
+  overflow: auto;             
+}
+
+.driver-notice-box {
+  flex: 1 1 auto;           /* يسمح لها بالتمدد حسب المساحة المتاحة */
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+  max-height: none;
+  box-sizing: border-box;
+  margin: 0;                /* بدل 5px لتجنب زيادة المساحة */
+}
+
+.driver-notice-box .content-box span,
+.driver-notice-box .content-box p {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.image-box img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
   .content-box { font-size: 12px; text-align: center; }
   .image-box{text-align: center;}
   .image-box img { max-width: 95%; margin: 0 auto; }
@@ -455,7 +492,51 @@
 @media (min-width: 601px) and (max-width: 768px) {
   .main-title { font-size: 18px; }
   .sub-title { font-size: 14px; }
-  .driver-notice-box { font-size: 11px; }
+  .wrapper-box {
+  display: flex;
+  flex-direction: row;  
+  gap: 5px;
+  justify-content: center;
+  align-items: flex-start; /* لضبط ارتفاع العناصر */
+}
+
+.side-box, .image-box {
+  flex: 0 0 100px;       /* ثابت العرض تمامًا */
+  font-size: 11px;
+  text-align: center;
+  overflow-wrap: break-word;   
+  word-wrap: break-word;      
+  hyphens: auto;               
+  max-height: 200px;           
+  overflow: auto;             
+}
+
+.driver-notice-box {
+  flex: 1 1 auto;           /* يسمح لها بالتمدد حسب المساحة المتاحة */
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+  max-height: none;
+  box-sizing: border-box;
+  margin: 0;                /* بدل 5px لتجنب زيادة المساحة */
+}
+
+.driver-notice-box .content-box span,
+.driver-notice-box .content-box p {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.image-box img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
   .content-box { font-size: 13px; }
   .image-box img { max-width: 80%; margin: 10px auto; }
   table, th, td { font-size: 13px; padding: 8px; }
