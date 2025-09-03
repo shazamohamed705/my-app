@@ -184,7 +184,8 @@
 /* الغلاف */
 .wrapper-box {
   display: flex;
-  justify-content: space-between; /* يمين ويسار */
+  justify-content: space-between; 
+  flex-direction: row;
   align-items: flex-start;
   gap: 15px;
   margin: 15px;
@@ -383,146 +384,36 @@
 
   
 
-@media (max-width: 768px) {
- /* جدول الرحلة الرئيسي */
-.trip-table {
-  width: 100%;
-  max-width: 100%;
-  border-collapse: collapse;
-  font-size: 12px;
-  table-layout: auto;
-  overflow-x: visible; /* يمنع ظهور scroll ومساحة فارغة */
-  box-sizing: border-box;
+@media (max-width: 400px) {
+  .contract-outer { padding: 10px; margin: 10px; font-size: 12px; }
+  .main-title { font-size: 14px; }
+  .sub-title { font-size: 12px; }
+  .driver-notice-box { flex-direction: column; font-size: 9px; padding: 5px; }
+  .side-box { width: 100%; margin-bottom: 10px; font-size: 12px; }
+  .content-box { text-align: center; font-size: 11px; line-height: 1.4; }
+  .image-box img { max-width: 100%; }
+  table, th, td { font-size: 11px; padding: 5px; }
 }
 
-/* فقط الجداول الكبيرة الأخرى يسمح لها بالـ scroll */
-.passenger-table,
-.car-trips,
-.VEHICLE-table,
-.my-table.first-party {
-  width: 100%;
-  display: block;
-  overflow-x: auto;
-  box-sizing: border-box;
+/* موبايل متوسط */
+@media (min-width: 401px) and (max-width: 600px) {
+  .contract-outer { padding: 15px; }
+  .main-title { font-size: 16px; }
+  .sub-title { font-size: 13px; }
+  .driver-notice-box { flex-direction: column; font-size: 10px; }
+  .side-box { width: 100%; margin-bottom: 10px; }
+  .content-box { font-size: 12px; text-align: center; }
+  .image-box img { max-width: 95%; margin: 0 auto; }
+  table, th, td { font-size: 12px; padding: 6px; }
 }
 
-
-  /* th و td */
-  .trip-table th,
-  .trip-table td,
-  .passenger-table th,
-  .passenger-table td,
-  .car-trips th,
-  .car-trips td,
-  .VEHICLE-table th,
-  .VEHICLE-table td,
-  .my-table.first-party th,
-  .my-table.first-party td {
-    padding: 6px 8px;
-    font-size: 12px;
-    white-space: normal; /* يسمح بتفاف النص */
-    text-align: center;
-  }
-
-  /* الصورة الهيدرية */
-  .header-image img {
-    max-height: 150px;
-    width: 100%;
-    object-fit: cover;
-  }
-
-  /* مربعات Start / Finish */
-  .car-trips th span {
-    font-size: 10px;
-    padding: 2px 4px;
-    display: inline-block;
-    margin-right: 5px;
-  }
-
-  /* محتوى driver-notice-box */
-  .driver-notice-box {
-    width: 100%;
-    margin: 10px 0;
-    font-size: 10px;
-  }
-
-  /* wrapper-box يتحول لعمودي */
- .wrapper-box {
-    flex-direction: column;
-    gap: 15px;
-    padding: 10px;
-  }
-  .wrapper-box .image-box {
-    max-width: 90%;
-    margin: 0 auto;
-  }
-  .content-box {
-  flex: 1;
-  min-width: 0;
+/* تابلت صغير */
+@media (min-width: 601px) and (max-width: 768px) {
+  .main-title { font-size: 18px; }
+  .sub-title { font-size: 14px; }
+  .driver-notice-box { font-size: 11px; }
+  .content-box { font-size: 13px; }
+  .image-box img { max-width: 80%; margin: 10px auto; }
+  table, th, td { font-size: 13px; padding: 8px; }
 }
-
- .notice-title {
-    color: red;
-    font-weight: bold;
-    font-size: 14px;
-  }
-
-  .arabic-notice {
-    color: red;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 1.4;
-  }
-
-  .english-notice {
-    margin: 15px 0;
-  }
-
-  .english.bold {
-    font-size: 12px;
-    line-height: 1.5;
-    margin-bottom: 10px;
-  }
-  /* تحسين النصوص */
-  .notice-header {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin-bottom: 15px;
-  }
-  hr {
-    margin: 15px 0;
-    border: none;
-    border-top: 1px solid #ddd;
-  }
-
-  /* تحسين العناوين */
-  .side-box h3 {
-    font-size: 16px;
-    margin-bottom: 8px;
-  }
-
-  .side-box p {
-    font-size: 12px;
-    margin-bottom: 5px;
-  }
-
-  .side-box .small {
-    font-size: 10px;
-    color: #666;
-  }
-
-  .wrapper-box .car-trips {
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  /* النصوص الكبيرة مثل main-title و sub-title */
-  .main-title,
-  .sub-title {
-    font-size: 16px;
-    top: 0;
-  }
-}
-
 
