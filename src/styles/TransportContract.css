@@ -384,12 +384,45 @@
   .contract-outer { padding: 10px; margin: 10px; font-size: 12px; }
   .main-title { font-size: 14px; }
   .sub-title { font-size: 12px; }
-  .wrapper-box{align-items:flex-start ;flex-direction: row;display: flex;justify-content: center;gap: 8px;}
-  .driver-notice-box { width :100%;align-items: center;flex-direction: column; font-size: 9px; padding: 5px; }
-  .side-box { width: auto; margin: 0 auto; font-size: 12px; }
-  .content-box { text-align: center; font-size: 11px; line-height: 1.4; }
-  .image-box img { max-width: 100%;justify-content: center; }
-  table, th, td { font-size: 11px; padding: 5px; }
+  .wrapper-box {
+    display: flex;
+    flex-direction: row;     
+    align-items: flex-start;  
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .driver-notice-box { 
+    flex: 1;                 
+    width: auto;               
+    font-size: 9px; 
+    padding: 5px; 
+  }
+
+  .side-box { 
+    flex: 0 0 100px;           
+    margin: 0; 
+    font-size: 11px; 
+  }
+
+  .content-box { 
+    text-align: center; 
+    font-size: 11px; 
+    line-height: 1.4; 
+  }
+
+  .image-box img { 
+    max-width: 100%; 
+    height: auto;              
+    display: block; 
+    margin: 0 auto;            
+  }
+ table, th, td { 
+  font-size: 11px; 
+  padding: 5px; 
+}
+
+  
 }
 
 /* موبايل متوسط */
