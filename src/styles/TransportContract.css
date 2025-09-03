@@ -518,29 +518,27 @@
   .wrapper-box {
     display: flex;
     flex-direction: row;   /* افقي */
-    flex-wrap: wrap;       /* يسمح بالانكسار عند ضيق الشاشة */
+    flex-wrap: wrap;       /* يسمح باللف عند ضيق الشاشة */
     justify-content: flex-start;
     align-items: flex-start;
     gap: 10px;
     margin: 10px;
   }
 
-  /* السليد */
   .side-box {
-    flex: 0 0 30%;         /* تقريبًا ثلث العرض */
-    min-width: 100px;
+    flex: 0 0 35%;         /* تقريبًا ثلث العرض */
+    min-width: 120px;      /* أقل عرض قبل أن يلف */
     text-align: center;
     font-size: 12px;
   }
 
-  /* صندوق التنبيه */
   .driver-notice-box {
-    flex: 1 1 65%;         /* ياخد الباقي */
-    min-width: 150px;
+    flex: 1 1 60%;         /* ياخد الباقي */
+    min-width: 150px;      /* أقل عرض قبل أن يلف */
     box-sizing: border-box;
     font-size: 12px;
     line-height: 1.4;
-    text-align: center;
+    text-align: left;
   }
 
   .driver-notice-box .content-box span,
@@ -552,7 +550,6 @@
     overflow-wrap: break-word;
     hyphens: auto;
   }
-
   /* الصورة */
   .image-box {
     width: 100%;           /* تظهر تحتهم إذا ضاق المكان */
