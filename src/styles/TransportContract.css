@@ -496,22 +496,27 @@
   .side-box {
     padding: 8px 10px;
     width: 40px;
+    flex: 1 1 auto;  
   }
   
   .side-box h3 {
     font-size: 14px;
+    
   }
   
   .side-box p {
     font-size: 11px;
+    flex: 1 1 auto;  
   }
   
   .side-box .small {
     font-size: 9px;
+    flex: 1 1 auto;  
   }
   
   .content-box {
     padding: 5px 8px;
+    flex: 1 1 auto;  
   }
   
   .content-box span,
