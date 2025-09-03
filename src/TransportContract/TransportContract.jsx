@@ -267,7 +267,7 @@ cooperation.Ebdaat Al-Obour Transport <br />
   className="main1-title"
   style={{ fontSize: "32px", fontWeight: "bold", color: "red" }}
 >
-  كشف الرحاب
+  كشف الركاب
 </div>
              
               </div>
