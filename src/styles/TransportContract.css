@@ -437,51 +437,70 @@
   .contract-outer { padding: 15px; }
   .main-title { font-size: 16px; }
   .sub-title { font-size: 13px; }
- .wrapper-box {
-  display: flex;
-  flex-direction: row;  
-  gap: 5px;
-  justify-content: center;
-  align-items: flex-start; /* لضبط ارتفاع العناصر */
-}
+.wrapper-box {
+    gap: 10px;
+    padding: 10px;
+  }
 
-.side-box, .image-box {
-  flex: 0 0 100px;       /* ثابت العرض تمامًا */
-  font-size: 11px;
-  text-align: center;
-  overflow-wrap: break-word;   
-  word-wrap: break-word;      
-  hyphens: auto;               
-  max-height: 200px;           
-  overflow: auto;             
-}
+  .side-box {
+    min-width: 140px;
+    max-width: 160px;
+    padding: 10px;
+  }
 
-.driver-notice-box {
-  flex: 1 1 auto;           /* يسمح لها بالتمدد حسب المساحة المتاحة */
-  font-size: 12px;
-  line-height: 1.5;
-  text-align: center;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  hyphens: auto;
-  max-height: none;
-  box-sizing: border-box;
-  margin: 0;                /* بدل 5px لتجنب زيادة المساحة */
-}
+  .side-box h3 {
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
 
-.driver-notice-box .content-box span,
-.driver-notice-box .content-box p {
-  display: block;
-  margin-bottom: 5px;
-}
+  .side-box p {
+    font-size: 11px;
+    margin-bottom: 4px;
+  }
 
-.image-box img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
+  .side-box .small {
+    font-size: 9px;
+  }
 
+  .driver-notice-box {
+    gap: 10px;
+  }
+
+  .notice-title {
+     font-size: 12px;
+    margin-bottom: 6px;
+  }
+
+  .arabic-notice {
+    font-size: 10px;
+    line-height: 1.3;
+  }
+
+  .english.bold {
+    font-size: 10px;
+    line-height: 1.3;
+    margin-bottom: 8px;
+  }
+
+  .company {
+    font-size: 11px;
+    margin-top: 6px;
+  }
+
+  .urdu {
+    font-size: 9px;
+    line-height: 1.3;
+    margin-top: 10px;
+  }
+
+  hr {
+    margin: 10px 0;
+  }
+
+  .image-box {
+    min-width: 80px;
+    max-width: 100px;
+  }
   .content-box { font-size: 12px; text-align: center; }
   .image-box{text-align: center;}
   .image-box img { max-width: 95%; margin: 0 auto; }
