@@ -542,7 +542,16 @@
     margin: 0 auto;
   }
 
-  .content-box { font-size: 13px; }
+  .content-box {flex: 1 1 auto;           /* يسمح لها بالتمدد حسب المساحة المتاحة */
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+  max-height: none;
+  box-sizing: border-box;
+  margin: 0; }
   .image-box img { max-width: 80%; margin: 10px auto; }
   table, th, td { font-size: 13px; padding: 8px; }
 }
