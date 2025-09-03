@@ -499,28 +499,8 @@
     margin: 15px 0; /* نفس المسافة */
   }
   
-  .my-table.first-party,
-  .car-trips,
-  .VEHICLE-table,
-  .trip-table,
-  .passenger-table {
-    font-size: 13px; /* نفس الحجم الأصلي */
-    margin-top: 20px; /* نفس المسافة */
   }
-  
-  .my-table.first-party th,
-  .my-table.first-party td,
-  .car-trips th,
-  .car-trips td,
-  .VEHICLE-table th,
-  .VEHICLE-table td,
-  .trip-table th,
-  .trip-table td,
-  .passenger-table th,
-  .passenger-table td {
-    padding: 10px 15px; /* نفس الطول الأصلي */
-  }
-}
+
 
 @media (max-width: 600px) {
   .contract-outer {
@@ -691,7 +671,7 @@
   .content-box .english,
   .content-box .urdu {
     font-size: 12px; /* نفس الحجم الأصلي */
-    margin-bottom: 8px; /* نفس المسافة */
+    margin-bottom: 5px; /* نفس المسافة */
   }
   
   .image-box {
@@ -774,3 +754,4 @@
     min-width: 60px;
   }
 }
+
