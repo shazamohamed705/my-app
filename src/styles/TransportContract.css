@@ -386,43 +386,30 @@
   .sub-title { font-size: 12px; }
   .wrapper-box {
     display: flex;
-    flex-direction: row;     
-    align-items: flex-start;  
+    flex-direction: row;  /* جنب بعض */
+    flex-wrap: wrap;      /* يسمح بالكسر لو المساحة صغيرة */
+    align-items: flex-start;
     justify-content: center;
-    gap: 8px;
+    gap: 5px;
   }
 
-  .driver-notice-box { 
-    flex: 1;                 
-    width: auto;               
-    font-size: 9px; 
-    padding: 5px; 
+  .side-box, .driver-notice-box, .image-box {
+    flex: 1 1 100px;      /* flex-grow:1, flex-shrink:1, قاعدة عرض 100px */
+    min-width: 80px;      /* أقل عرض ممكن */
+    max-width: 150px;     /* أقصى عرض */
+    font-size: 11px;
+    text-align: center;
   }
 
-  .side-box { 
-    flex: 0 0 100px;           
-    margin: 0; 
-    font-size: 11px; 
-  }
-
-  .content-box { 
-    text-align: center; 
-    font-size: 11px; 
-    line-height: 1.4; 
-  }
-
-  .image-box img { 
-    max-width: 100%; 
-    height: auto;              
-    display: block; 
-    margin: 0 auto;            
+  .image-box img {
+    max-width: 100%;
+    height: auto;
   }
  table, th, td { 
   font-size: 11px; 
   padding: 5px; 
 }
 
-  
 }
 
 /* موبايل متوسط */
