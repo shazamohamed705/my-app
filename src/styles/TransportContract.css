@@ -404,16 +404,23 @@
     max-height: 200px;           /* تحديد أقصى ارتفاع */
     overflow: auto;              /* إضافة scroll لو النص طويل جدًا */
   }
-  .driver-notice-box {
-    width: 100%;             /* كامل العرض */
-    font-size: 12px;         /* حجم فونت مناسب */
-    text-align: center;      /* للعرض على الموبايل */
+.driver-notice-box {
+    width: 100%;               /* ياخد كامل العرض */
+    font-size: 12px;           /* حجم فونت مناسب */
+    line-height: 1.5;          /* ارتفاع سطر مناسب للقراءة */
+    text-align: center;         /* للنصوص على الموبايل */
+    overflow-wrap: break-word;  /* كسر الكلمات الطويلة */
+    word-wrap: break-word;
+    hyphens: auto;
+    max-height: none;           /* مش هنقيد الطول */
+    box-sizing: border-box;
   }
 
-  .driver-notice-box .content-box {
-    line-height: 1.4;        /* ارتفاع سطر مناسب للقراءة */
+  .driver-notice-box .content-box span,
+  .driver-notice-box .content-box p {
+    display: block;            /* كل فقرة أو span في سطر مستقل */
+    margin-bottom: 5px;
   }
-
   .image-box img {
     max-width: 100%;
     height: auto;
