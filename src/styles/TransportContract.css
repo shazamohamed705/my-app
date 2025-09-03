@@ -500,15 +500,14 @@
   align-items: flex-start; /* لضبط ارتفاع العناصر */
 }
 
-.side-box, .image-box {
+.side-box {
   flex: 0 0 100px;       /* ثابت العرض تمامًا */
   font-size: 11px;
   text-align: center;
   overflow-wrap: break-word;   
   word-wrap: break-word;      
   hyphens: auto;               
-  max-height: 200px;           
-  overflow: auto;             
+            
 }
 
 .driver-notice-box {
@@ -530,12 +529,18 @@
   margin-bottom: 5px;
 }
 
-.image-box img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
+ .image-box {
+    width: 100%;              /* ياخد كامل العرض */
+    text-align: center;
+    margin-top: 5px;          /* مسافة بسيطة فوق */
+  }
+
+  .image-box img {
+    max-width: 80%;           /* تكبر بالنسبة للعرض */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
 
   .content-box { font-size: 13px; }
   .image-box img { max-width: 80%; margin: 10px auto; }
